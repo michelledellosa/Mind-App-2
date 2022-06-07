@@ -1,0 +1,17 @@
+<div>
+  <ion-calendar 
+  [(ngModel)]="dateMulti"
+    [type]="type"
+    [format]="'yyyy-MM-dd'"
+ 
+    [min]="01/01/1990"
+    >
+
+  </ion-calendar>
+
+  <div class="align-center">
+    <ion-button (click)="getDates()">
+        Añadir Fecha
+    </ion-button>
+  </div> 
+</div>

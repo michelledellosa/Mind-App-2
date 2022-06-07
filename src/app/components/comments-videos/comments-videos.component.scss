@@ -1,0 +1,38 @@
+.active {
+    //background-color: #f01454;
+    //color: #f01454;
+    color: #CC9C61;
+    
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    padding-top: 1.2vh;
+    //color: white;
+    //border-bottom: 1px solid #f01454;
+    border-bottom: 1px solid #CC9C61;
+}
+
+.inactive {
+    //background-color: #f7cad6;
+    //color: #f7cad6;
+    color: #FCE19F ;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    padding-top: 1.2vh;
+    //color: white;
+    border-bottom: 1px solid transparent;
+}
+
+.active-text{
+    color: #1A1A1A;
+}
+
+.inactive-text{
+    color: #f7cad6;
+}
+
+.padding-lateral{
+    padding-left: 10%;
+    padding-right: 10%;
+  }

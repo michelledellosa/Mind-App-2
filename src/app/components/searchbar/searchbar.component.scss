@@ -1,0 +1,12 @@
+ion-toolbar{
+    --background: transparent !important;
+    ion-searchbar{
+        --border-radius: 10px;   
+    }
+}
+ion-button{
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 5px;
+    height: 42px;
+}

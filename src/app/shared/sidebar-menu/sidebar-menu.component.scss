@@ -1,0 +1,57 @@
+
+ion-label{
+    h4{
+        //color: #CC9C61;
+        color: white;
+        font-weight: 700;
+        margin-left: 10%;
+    }
+}
+.vers{
+    color: #000000;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.referrals-columns{
+    display: flex;
+    color: #f01454;
+    margin-top: 5%;
+    font-weight: 600;
+    font-size: 80%;
+    padding-left: 10%;
+}
+
+.text-points{
+    text-align: left;
+    margin-top: 10%;
+    font-size: 12px;
+}
+
+
+.text-points-referrals{
+    font-size: 80%;
+    font-weight: 600
+}
+
+.red-color{
+    color: red
+}
+
+.green-color{
+    color: green
+}
+
+.uni-color{
+    color:#CC9C61
+}
+
+.footer-sidemenu{
+    //margin-top: 10%;
+    padding-left: 5%;
+    display: flex;
+}
+
+.item-background-color{
+    --ion-item-background:#1A1A1A;
+}

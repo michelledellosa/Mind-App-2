@@ -24,3 +24,83 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+
+/****************************************/
+
+.popover-content.sc-ion-popover-ios {
+    display: -ms-flexbox;
+    width: 80% !important;
+    display: flex;
+    position: absolute;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    overflow: auto;
+    z-index: 10;
+    margin-right: 5px;
+    //margin-left: -15%
+    }
+    
+    @media (max-width: 340px) {
+      .popover-content.sc-ion-popover-ios {
+        width: 95% !important;
+      }
+    }
+  
+    .ngx-pagination {
+      padding-left: 0px !important;
+      font-size: 12px;
+    }
+    
+    .ngx-pagination .current,
+    .btn-info {
+  //    background: #16c0da !important;
+      background: #CC9C61 !important;
+      border: transparent !important;
+      border-radius: 20px !important;
+    }
+    
+    .ngx-pagination .current:hover {
+      //background: #16c0da !important;
+      background: #CC9C61 !important;
+      border-radius: 20px !important; 
+      border: transparent !important;
+    }
+  
+    .table-responsive {
+      display: block;
+      width: 100%;
+      overflow-x: auto;
+      -ms-overflow-style: -ms-autohiding-scrollbar;
+    }
+  
+    
+  ._thead{
+    border-bottom: 1px solid #CC9C61;
+  }
+  
+  .tr-thead{
+    padding: 1%; 
+    font-size: 12px; 
+    color: #CC9C61; 
+    font-weight: bold;
+  }
+  
+  .tr-tbody{
+    width: 20%; 
+    text-align: center; 
+    padding: 2%;
+    font-size: 12px;
+  }
+  
+  .space-th-td{
+    padding: 10px 50px;
+    font-size: 12px;
+  }
+
+  .adp-summary{
+   margin-top: 10%
+  }
+
+ 
+ 

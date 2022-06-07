@@ -1,0 +1,41 @@
+<ion-list>
+<div *ngIf="category=='CERCA DE MI'  && nearToMe.length!=0" > 
+
+  <ng-container *ngFor="let store of nearToMe | filter:searchbarText:'label'">
+
+    <ion-item class="estab_list_item" 
+      (click)=" goMap(store,1)">
+      <ion-avatar slot="start">
+        <img [defaultImage]="commonService.defaultImage2" [lazyLoad]="store.img">
+      </ion-avatar>
+      <ion-label class="ion-text-wrap">
+        <h3 style="color: black;">
+          {{store.Establecimiento |titlecase}}
+        </h3>
+      </ion-label>
+    </ion-item>
+  </ng-container>
+</div>
+  
+
+
+  <ng-container *ngFor="let store of stores | filter:searchbarText:'label'">
+    <!--searchBarText : valida que el search no este vacio, y searchBar =1 significa que el search esta activado-->
+
+    <ion-item class="estab_list_item" *ngIf="store.type == category || searchBarText!='' && searchBar==1"
+      (click)=" goMap(store,0)">
+      <!--
+        <ion-item class="estab_list_item" *ngIf="store.type == category | | searchBarText!='' && searchBar==1"
+      (click)="goToStore(store)">-->
+      
+      <ion-avatar slot="start">
+        <img [defaultImage]="commonService.defaultImage2" [lazyLoad]="store.img">
+      </ion-avatar>
+      <ion-label class="ion-text-wrap">
+        <h3 style="color: black;">
+          {{store.label |titlecase}}
+        </h3>
+      </ion-label>
+    </ion-item>
+  </ng-container>
+</ion-list>

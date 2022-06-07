@@ -1,0 +1,54 @@
+<app-header2 [title]='title' [go]="'pages/rewards'"></app-header2>
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <div style="margin: 0 auto;height: 40%;width: 40%;" >
+        <img [defaultImage]="commonService.defaultImage" [lazyLoad]="reward.foto">
+      </div>
+      <div class="center">
+      <label >{{reward.Nombre_Promocion}}</label>
+    </div>
+    <div class="center">
+        <label >Puntos: {{reward.cantidad_puntos}}</label> 
+      </div>
+    </ion-card-content>
+  </ion-card>
+  <div>
+    <ion-row style="margin: 2%;" class="center">
+      <ion-col size="6">
+        <label >Inicio: {{reward.fecha_inicio}}</label> 
+      </ion-col>
+      <ion-col size="6">
+        <label >Finaliza: {{reward.fecha_final}}</label> 
+      </ion-col>
+    </ion-row>
+    
+  </div>
+
+  <div class="styleText">
+    <h1 class="center"> DESCRIPCIÓN </h1>
+  </div>
+
+  <ion-card>
+    <ion-card-content>
+      <p>{{reward.Descripcion}}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <div class="styleText">
+    <h1 class="center">  TÉRMINOS </h1>
+  </div>
+  <ion-card>
+    <ion-card-content>
+      <p>{{reward.Terminos}}</p>
+    </ion-card-content>
+  </ion-card>
+  
+<!--ESTA OPCION AUN NO ESTA EN LA API-->
+  <!--
+  <div class="ion-text-center" style="margin: 2%;">
+    <ion-button expand="block" size="small">{{'SOLICITAR' | titlecase}}</ion-button>
+  </div>-->
+
+  
+</ion-content>

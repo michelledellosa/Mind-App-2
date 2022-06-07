@@ -1,0 +1,115 @@
+<ion-header>
+  <ion-toolbar [class.show-background]="showToolbar">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <!--<ion-title>UNI</ion-title>-->
+    <!--<ion-buttons slot="end">-->
+      <div>
+        <ion-buttons>
+          <ion-button class="center-logo-header">
+            <ion-img class="logo-header" style="margin-left: -5%;" src="assets/images/logo-2.png"></ion-img>
+          </ion-button>
+        </ion-buttons>
+      </div>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content fullscreen (ionScroll)="onScroll($event)" [scrollEvents]="true">
+  <!--Componente de map-->
+  <div class="mapcnt">
+    <app-map></app-map>
+  </div>
+  <div class="slidcat">
+    <!--Slider de categoria-->
+    <div class="contslicat">
+      <ion-grid>
+      <ion-row *ngIf="searchBar==0">
+        <ion-col size="10">
+          <ion-slides pager="false" [options]="slideOpts">
+            <ion-slide >
+              <div class="itemsl" (click)="search('CERCA DE MI')" >
+                <div class="contitemsl">
+                  <div  class="center-card">
+                    <ion-img src="../../../assets/images/min-white.png"></ion-img>
+                  </div>                          
+                </div>
+                <label>CERCA DE MI</label>
+              </div>
+            </ion-slide>
+
+            <ion-slide *ngFor="let category of categories">
+              <div class="itemsl" (click)="search(category)">
+                <div class="contitemsl" >
+                  <div  class="center-card">
+                    <ion-img src="../../../assets/images/min-white.png" ></ion-img>
+                  </div>
+                </div>
+                {{category}}
+              </div>
+            </ion-slide>
+          </ion-slides>
+        </ion-col>
+        <ion-col size="2">
+          <div class="div-center">
+            <ion-button class="button-search" (click)="searchView()">
+              <ion-icon name="search"></ion-icon>
+            </ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row *ngIf="searchBar==1">
+        <ion-col size='12'>
+          <app-searchbar (searchbarText)="getText($event)" (searchToolbar)="changeSearchToolbar($event)">
+          </app-searchbar>
+        </ion-col>
+      </ion-row>
+      </ion-grid>
+    </div>
+    <!--Listado de establecmiento por categoria-->
+    <div class="liststores">
+
+      <app-stores [logged]="logged" [category]="searchCode" [searchBar]="searchBar" [searchbarText]=" searchbarText">
+      </app-stores>
+      <app-not-found *ngIf="searchCode==''"></app-not-found>
+    </div>
+    
+    <!-- <div class="ion-padding"></div> -->
+  </div>
+
+
+</ion-content>
+
+<!--<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Turn on Ionic Device GPS
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <ion-button color="danger" (click)="chckAppGpsPermission()">
+      Get GPS Locaction
+    </ion-button>
+
+    <ion-row>
+      <ion-col>Longitude</ion-col>
+      <ion-col> locCords.longitude</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>Latitude</ion-col>
+      <ion-col>locCords.latitude</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>Accuracy</ion-col>
+      <ion-col>locCords.accuracy</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>Timestamp</ion-col>
+      <ion-col> date:'medium'</ion-col>
+    </ion-row>
+  </div>
+</ion-content>-->

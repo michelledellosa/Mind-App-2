@@ -1,0 +1,56 @@
+.container-shopping{
+    background-color: white;
+}
+
+.title-shopping{
+    background-color: #CC9C61; 
+    color: white; 
+    font-weight: bold;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 5%;
+    border-radius: 5px;
+}
+
+.text-button {
+    font-weight: bold;
+    color:white;
+    font-size: 12px;
+}
+
+
+
+@media (max-width: 380px) {
+ 
+    .button-search{
+        margin-top: 5%;
+        width: 30%;
+        height: 30px;
+        min-width: 60px !important;
+    }
+}
+
+.center-vh{
+    display:flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.button-style {
+    background-color: #CC9C61; 
+    border-radius:5px;
+    color: white;
+    font-weight: bold;
+}
+
+.tr-thead{
+    padding: 1%;
+    font-size: 12px; 
+    color: #CC9C61; 
+    font-weight: bold;
+}
+
+.button-total{
+    min-width:100px;
+    
+}

@@ -1,0 +1,36 @@
+/* Transparent standard */
+ion-toolbar {
+    //--background: #662583;
+    --background: #1A1A1A;
+    --ion-color-base:  transparent !important;
+
+}
+
+/* Show background if class is active */
+.show-background {
+    border-style: none;
+}
+
+/* Remove bottom border on md */
+.header-md::after {
+    background-image: none;
+}
+
+/* Remove bottom border on ios */
+.header-ios ion-toolbar:last-child {
+    --border-width: 0;
+}
+
+.logo-header{
+    height: 80%;
+    width: 80%;
+   // margin-left: 5%;
+}
+
+ion-back-button {
+    color:white
+}
+
+ion-title {
+    color:white
+}

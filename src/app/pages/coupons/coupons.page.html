@@ -1,0 +1,44 @@
+<app-header2 [title]="'Cupones'" [go]="'pages/coupon'"></app-header2>
+
+<ion-content>
+  <div *ngIf="_loginServices==true && !coupons.Id_Asignado; else couponsExist">
+    <ion-card *ngFor="let coupon of coupons " (click)='couponDetails(coupon.Id_Cupones)'>
+      <ion-card-content>
+        <div style="margin: 0 auto;height: 40%;width: 40%;">
+          <img [defaultImage]="commonService.defaultImage" [lazyLoad]="coupon.Foto">
+        </div>
+        <label>{{coupon.Nombre_del_Cupon}}</label>
+        <div>
+          <label>{{filterStore(coupon.Tienda)}}</label>
+        </div>
+        <div>
+          <label>Descripcion: {{coupon.Descripcion}}</label>
+        </div>
+        <div>
+          <ion-row>
+            <ion-col size="6">
+              <label style="text-align: left;">Inicio: {{coupon.Fecha_inicio}}</label>
+            </ion-col>
+            <ion-col size="6">
+              <label style="text-align: left;">Finaliza: {{coupon.Fecha_final}}</label>
+            </ion-col>
+          </ion-row>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <ng-template #couponsExist>
+    <ion-card>
+      <ion-card-content>
+        <div *ngIf="_loginServices==true && coupons.Id_Asignado;" style="text-align: center;">
+          <label> Usted no posee cupones disponibles</label>
+        </div>
+        <div *ngIf="_loginServices==false" style="text-align: center;">
+          <label> Inicie sesión para acceder a sus cupos disponibles</label>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </ng-template>
+
+</ion-content>

@@ -1,0 +1,190 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="['/auth/login']" slot="start" color="light">
+        <ion-icon style="zoom: 1.5;" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">{{ 'sign up' |  translate | uppercase }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-col class="ion-align-self-center" size-md="10" size-lg="6" size-xs="12">
+
+        <div class="ion-padding">
+          <ion-list>
+            <div class="ion-padding">
+              <h3>{{'it’s quick and easy' |  translate | titlecase }}.</h3>
+              <h4>{{'personal information' |  translate | titlecase }}</h4>
+            </div>
+
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+              <ion-item>
+                <ion-label position="floating">{{'name' |  translate | titlecase }}</ion-label>
+                <ion-input required type="text" formControlName="name"> </ion-input>
+              </ion-item>
+              <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                <div *ngIf="f.name.errors.required" class="ion-text-center red">
+                  <p>
+                    <ion-icon name="hand"></ion-icon> {{'is required' |  translate | titlecase }}
+                  </p>
+                </div>
+              </div>
+              <ion-item>
+                <ion-label position="floating">{{'last name' |  translate | titlecase }} </ion-label>
+                <ion-input type="text" formControlName="surnames">
+                </ion-input>
+              </ion-item>
+              <div *ngIf="submitted && f.surnames.errors" class="invalid-feedback">
+                <div *ngIf="f.surnames.errors.required" class="ion-text-center">
+                  <p>
+                    <ion-icon name="hand"></ion-icon> {{'is required' |  translate | titlecase }}
+                  </p>
+                </div>
+              </div>
+
+              <ion-item>
+                <ion-label position="floating">{{'Identification (ID) / passport' |  translate | titlecase }}
+                </ion-label>
+                <ion-input type="text" formControlName="identification"
+                  [ngClass]="{ 'is-invalid': submitted && f.identification.errors }">
+                </ion-input>
+              </ion-item>
+              <div *ngIf="submitted && f.identification.errors" class="invalid-feedback">
+
+                <div *ngIf="f.identification.errors.required" class="ion-text-center">
+                  <p>
+                    <ion-icon name="hand"></ion-icon> {{'is required' |  translate | titlecase }}
+                  </p>
+                </div>
+              </div>
+              <div *ngIf="f.identification.errors?.existingIdentification" class="invalid-feedback ion-text-center">
+                <p>
+                  <ion-icon name="hand"></ion-icon> {{'identification already exists' |  translate | titlecase }}
+
+                </p>
+              </div>
+              <ion-item>
+                <ion-label>
+                  {{'prefijo' |  translate | titlecase}}
+                </ion-label>
+                <!-- <ionic-selectable [hasVirtualScroll]="true" [virtualScrollHeaderFn]="getCountryText"
+                  formControlName="prefijo" item-content itemValueField="phonecode" itemTextField="name"
+                  [items]="country" [canSearch]="true">
+                  <ng-template ionicSelectableItemTemplate let-port="item" let-isPortSelected="isItemSelected">
+                    <p class="ion-text-wrap">
+                      <strong>({{port.phonecode | uppercase }})</strong> -
+                      {{port.name |  translate | titlecase }}
+                    </p>
+                  </ng-template>
+                </ionic-selectable> -->
+              </ion-item>
+              <div *ngIf="submitted && f.prefijo.errors" class="invalid-feedback">
+                <div *ngIf="f.prefijo.errors.required" class="ion-text-center">
+                  <ion-icon name="hand"></ion-icon> {{'is required' |  translate | titlecase}}
+                </div>
+              </div>
+
+              <ion-item>
+                <ion-input placeholder="{{'phone' |  translate | titlecase}}" type="number" formControlName="phone">
+                </ion-input>
+              </ion-item>
+              <div *ngIf="submitted && f.phone.errors" class="invalid-feedback">
+                <div *ngIf="f.phone.errors.required" class="ion-text-center">
+                  <ion-icon name="hand"></ion-icon> {{'is required' |  translate | titlecase}}
+                </div>
+              </div>
+
+              <div class="ion-padding">
+                <h4>{{'Account information' |  translate | titlecase }} </h4>
+              </div>
+              <ion-item>
+                <ion-input placeholder="{{'Enter Email' | translate}}" type="email" formControlName="email">
+                </ion-input>
+              </ion-item>
+
+              <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+
+                <div *ngIf="f.email.errors.required" class="ion-text-center">
+                  <p>
+                    <ion-icon name="hand"></ion-icon> {{'is required' |  translate | titlecase }}
+                  </p>
+                </div>
+
+                <div *ngIf="f.email.errors.email">
+                  <p>
+                    <ion-icon name="hand"></ion-icon>
+                    {{'Email must be a valid email address' |  translate | titlecase }}
+                  </p>
+                </div>
+              </div>
+              <div *ngIf="f.email.errors?.existingEmail" class="invalid-feedback ion-text-center">
+                <p>
+                  <ion-icon name="hand"></ion-icon> {{'email already exists' |  translate | titlecase }}
+                </p>
+              </div>
+
+              <ion-item>
+                <ion-input placeholder="{{'Enter Password' | translate}}" [type]="password_type"
+                  formControlName="password"> </ion-input>
+                <ion-icon *ngIf="password_type === 'text'" slot="end" [ios]="'eye' + '-outline'" [md]="'eye' + '-sharp'"
+                  (click)="togglePasswordMode()"></ion-icon>
+                <ion-icon *ngIf="password_type === 'password'" slot="end" [ios]="'eye-off' + '-outline'"
+                  [md]="'eye-off' + '-sharp'" (click)="togglePasswordMode()">
+                </ion-icon>
+              </ion-item>
+              <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                <div *ngIf="f.password.errors.required" class="ion-text-center">
+                  <p>
+                    <ion-icon name="hand"></ion-icon> {{'is required' |  translate | titlecase }}
+                  </p>
+                </div>
+                <div *ngIf="f.password.errors.minlength" class="ion-text-center">
+                  <p>
+                    <ion-icon name="hand"></ion-icon>
+                    {{'Password must be at least 6 characters' |  translate | titlecase }}
+                  </p>
+                </div>
+              </div>
+
+              <ion-item>
+                <ion-input placeholder="{{'Confirm Password' | translate}}" [type]="password_type"
+                  formControlName="confirmPassword">
+                </ion-input>
+                <ion-icon *ngIf="password_type === 'text'" slot="end" [ios]="'eye' + '-outline'" [md]="'eye' + '-sharp'"
+                  (click)="togglePasswordMode()"></ion-icon>
+                <ion-icon *ngIf="password_type === 'password'" slot="end" [ios]="'eye-off' + '-outline'"
+                  [md]="'eye-off' + '-sharp'" (click)="togglePasswordMode()">
+                </ion-icon>
+              </ion-item>
+              <div *ngIf="submitted && f.confirmPassword.errors" class="invalid-feedback">
+                <div *ngIf="f.confirmPassword.errors.required" class="ion-text-center">
+                  <p>
+                    <ion-icon name="hand"></ion-icon> {{'is required' |  translate | titlecase }}
+                  </p>
+                </div>
+                <div *ngIf="f.confirmPassword.errors.mustMatch" class="ion-text-center">
+                  <p>
+                    <ion-icon name="hand"></ion-icon>{{'Passwords must match' |  translate | titlecase }}
+                  </p>
+                </div>
+              </div>
+              <ion-button type="submit" expand="block" class="axl_btn">
+                {{ 'sign up' |  translate | uppercase }}
+              </ion-button>
+            </form>
+
+          </ion-list>
+        </div>
+
+
+
+
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

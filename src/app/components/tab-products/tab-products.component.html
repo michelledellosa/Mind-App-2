@@ -1,0 +1,46 @@
+<ion-tab-bar slot="bottom" class="tabs-color">
+  <ion-tab-button class="tabs-color" (click)="call(detail.Telefono)">
+      <ion-icon name="call"></ion-icon>
+      <ion-label>Llamar</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button class="tabs-color">
+    <!--<a href="https://wa.me/{{detail.Whatsapp}}" class="tabs-color" style="text-decoration: none;">-->
+    <div (click)="whatsapp(detail.Whatsapp)">
+      <!--<div>-->
+      <div>
+        <ion-icon name="logo-whatsapp" style="width: 23px; height: 23px;"></ion-icon>
+      </div>
+      <div>
+        <ion-label>Whatsapp</ion-label>
+      </div>
+    </div>
+
+    <!--</a>-->
+
+  </ion-tab-button>
+  <!--
+  <ion-tab-button class="tabs-color">
+    <a href="mailto:{{detail.Correo}}" class="tabs-color" style="text-decoration: none;">
+      <div>
+        <ion-icon name="mail" style="width: 23px; height: 23px;"></ion-icon>
+      </div>
+      <div>
+        <ion-label>Email</ion-label>
+      </div>
+    </a>
+  </ion-tab-button>
+-->
+
+  <ion-tab-button class="tabs-color" style="text-decoration: none;" (click)="goToProducts(detail.Id)">
+    <ion-icon name="search"></ion-icon>
+    <ion-label>Productos</ion-label>
+  </ion-tab-button>
+
+
+  <ion-tab-button class="tabs-color" style="text-decoration: none;" (click)="goToGPS(detail.Id)">
+    <ion-icon name="locate"></ion-icon>
+    <ion-label>Ubicacion</ion-label>
+  </ion-tab-button>
+
+</ion-tab-bar>

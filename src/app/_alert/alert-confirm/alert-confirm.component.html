@@ -1,0 +1,18 @@
+<div class="msj_alert">
+  <div class="heade tf2 tc_b">
+    {{data?.title }}
+  </div>
+  <div class="msjal tf2 tc_b">
+    {{data?.question }}
+  </div>
+  <div class="bunt_acc">
+    <div class="flex center jsb column_xs">
+      <div class="btn1 tf2" (click)="dismiss(true)">
+        {{'Si quiero' }}
+      </div>
+      <div class="btn1 btn2 tc_b tf2" (click)="dismiss(false)">
+        {{'No' }}
+      </div>
+    </div>
+  </div>
+</div>

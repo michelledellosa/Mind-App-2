@@ -1,3 +1,10 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-split-pane when="true" contentId="main-content">
+    <ion-menu side="start" menuId="first" contentId="main-content" class="my-custom-menu">
+      <ion-content style="height: 80%;">
+        <app-sidebar-menu></app-sidebar-menu>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
 </ion-app>

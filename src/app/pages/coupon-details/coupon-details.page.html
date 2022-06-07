@@ -1,0 +1,59 @@
+<app-header2 [title]='title'></app-header2>
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <div style="margin: 0 auto;height: 40%;width: 40%;" >
+        <img [defaultImage]="commonService.defaultImage" [lazyLoad]="coupon.Foto">
+      </div>
+      <div class="center">
+      <label >{{coupon.Nombre_del_Cupon}}</label>
+    </div>
+    <div class="center">
+        <label >Puntos: {{coupon.Cantidad}}</label> 
+      </div>
+    </ion-card-content>
+  </ion-card>
+  <div >
+    <ion-row class="center">
+      <ion-col size="6">
+        <label >Inicio: {{coupon.Fecha_inicio}}</label> 
+      </ion-col>
+      <ion-col size="6">
+        <label >Finaliza: {{coupon.Fecha_final}}</label> 
+      </ion-col>
+    </ion-row>
+    <ion-row style="margin-left: 7%;" >
+      Tlf: {{coupon.Telefono}}
+    </ion-row>
+      <ion-row style="margin-left: 7%;"> 
+        Direccion: {{coupon.Direccion}}  
+    </ion-row>
+  </div>
+
+  <div class="styleText">
+    <h1 class="center"> DESCRIPCIÓN </h1>
+  </div>
+
+  <ion-card>
+    <ion-card-content>
+      <p>{{coupon.Descripcion}}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <div class="styleText">
+    <h1 class="center">  TÉRMINOS </h1>
+  </div>
+  <ion-card>
+    <ion-card-content>
+      <p>{{coupon.Terminos}}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <!--ESTA OPCION NOP ESTA EN LA API-->
+  <!--
+  <div class="ion-text-center" style="margin: 2%;">
+    <ion-button expand="block" size="small">{{'SOLICITAR' | titlecase}}</ion-button>
+  </div>-->
+
+  
+</ion-content>

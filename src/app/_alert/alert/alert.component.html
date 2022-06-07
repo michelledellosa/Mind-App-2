@@ -1,0 +1,18 @@
+<div class="msj_alert">
+  <div *ngIf="data?.header" class="heade tf2 tc_b">
+    {{data?.header }}
+  </div>
+  <div *ngIf="data?.text" class="heade tf2 tc_b">
+    {{data?.text }}
+  </div>
+  <div *ngIf="data?.message" class="msjal tf2 tc_b">
+    {{data?.message }}
+  </div>
+  <div class="bunt_acc">
+    <div class="flex center column_xs">
+      <div class="btn1 tf2" (click)="dismiss(true)">
+        {{'OK' }}
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<!--<app-header2 [title]='title' [go]="'pages/inbox'"></app-header2>-->
+<ion-header>
+  <ion-toolbar [class.show-background]="showToolbar">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="pages/inbox"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{inbox.title}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="deleteInbox(inbox.id)">
+        <!--<ion-img class="logo-header" src="assets/images/logo-puntosya.png"></ion-img>-->
+        <ion-icon name="trash" color="light"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card style="height: 30%; margin-top: 5%;">
+    <ion-card-content>
+      <div class="center" style="margin-top: 5%;">
+
+        <ion-label>{{inbox.title}}</ion-label>
+      </div>
+      <div style="margin-top:10%" class="center">
+        <ion-label>{{inbox.body}}</ion-label>
+      </div>
+    </ion-card-content>
+
+
+
+  </ion-card>
+</ion-content>

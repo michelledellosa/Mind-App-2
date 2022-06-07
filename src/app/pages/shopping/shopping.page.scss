@@ -1,0 +1,109 @@
+.container-shopping {
+    background-color: white;
+}
+
+.calendar-options {
+    display: flex;
+    margin-top: 5%;
+}
+
+.calendar-inputs {
+    display: flex;
+    width: 76%;
+
+}
+
+.gray-color {
+    color: gray
+}
+
+.ml-5 {
+    margin-left: 5%;
+}
+
+.buttton-container {
+    width: 20%;
+    margin-left: 2%;
+}
+
+.button-search {
+    height: 60%;
+    margin-top: 10%;
+    width: 100%;
+}
+
+.text-button {
+    font-weight: bold;
+    color: white;
+}
+
+.title-shopping {
+    background-color: #CC9C61;
+    color: white;
+    font-weight: bold;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 5%;
+    border-radius: 5px;
+}
+
+.input-date {
+    border: none;
+    background-color: white;
+    color: gray;
+}
+
+
+@media (max-width: 400px) {
+
+    .input-date {
+        border: none;
+        background-color: white;
+        color: gray;
+        margin-top: 5px;
+    }
+
+    .calendar-inputs {
+        width: 100%;
+    }
+
+    .calendar-options {
+        display: block;
+        text-align: center;
+    }
+
+    .buttton-container {
+        width: 100%;
+    }
+
+    .button-search {
+        margin-top: 5%;
+        width: 30%;
+        height: 30px;
+        min-width: 60px !important;
+    }
+}
+
+.center-vh {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-style {
+    background-color: #CC9C61;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+.button-total {
+    min-width: 150px;
+    text-align: right !important;
+}
+
+.text-button {
+    font-weight: bold;
+    color:white;
+    font-size: 12px;
+}

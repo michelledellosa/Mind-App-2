@@ -1,0 +1,95 @@
+<!--
+      // esto es para agregar nombre al marcador
+      [label]="{
+        text: m.label, fontWeight:'bold', fontSize: '20px', fontFamily: '', color: '#EE7909' 
+      }"
+    -->
+    <ng-container *ngIf="markers && nearme==0 ;else other_content">
+
+      <agm-map [styles]="mapStyles" [backgroundColor]="'#CC9C61'" [disableDefaultUI]="true" [latitude]="lat" [longitude]="lng"
+        [minZoom]="zoom -3" [maxZoom]="zoom + 3" [zoom]="zoom"  [streetViewControl]="false"  (mapClick)="mapClicked($event)">
+    
+        <agm-marker 
+          class="test-map" 
+          style="height: 10px;"
+          (markerClick)="clickedMarker(m.label, i)"
+          [latitude]="m.lat" 
+          [longitude]="m.lng" 
+          [title]=" m.label" 
+          [markerDraggable]="m.draggable" 
+          [iconUrl]="iconMarker"
+          (dragEnd)="markerDragEnd(m, $event)"
+          *ngFor="let m of markers; let i = index" >
+          
+          <agm-info-window>
+            <div class="cntinfmp">
+              <div class="header_cntmp">
+                <ion-card-subtitle>{{'Mind'}}</ion-card-subtitle>
+                <ion-card-title>{{m.label | titlecase}}</ion-card-title>
+              </div>
+              <div class="content_cntmp">
+                {{m.address}}
+              </div>
+              <div  class="footer_cntmap" style="padding: 5%;">
+                <ion-button class="modal-btn" (click)="goToStore(m)" color="secondary" 
+                 expand="block" size="small" style="height: 90%;"> 
+                <label style="color: white;"> {{'Ver' | titlecase}}</label>
+                </ion-button>
+              </div>
+            </div>
+          </agm-info-window>
+    
+        </agm-marker>
+    
+        <agm-circle [latitude]="lat + 0.3" [longitude]="lng" [radius]="5000" [fillColor]="'red'" [circleDraggable]="true"
+          [editable]="true">
+        </agm-circle>-
+      </agm-map>
+      
+    </ng-container>
+
+    <ng-container *ngIf="markers_nearme && nearme==1 ;else other_content">
+
+      <agm-map [styles]="mapStyles" [backgroundColor]="'#CC9C61'" [disableDefaultUI]="true" [latitude]="lat" [longitude]="lng"
+        [minZoom]="zoom -3" [maxZoom]="zoom + 3" [zoom]="zoom"  [streetViewControl]="false"  (mapClick)="mapClicked($event)">
+
+        <agm-marker 
+          class="test-map" 
+          style="height: 10px;"
+          (markerClick)="clickedMarker(n.label, i)"
+          [latitude]="n.Latitud_A" 
+          [longitude]="n.Longitud_A" 
+          [title]=" n.Establecimiento" 
+          [markerDraggable]=false 
+          [iconUrl]="iconMarker"
+          (dragEnd)="markerDragEnd(n, $event)"
+          *ngFor="let n of markers_nearme; let i = index" >
+          
+          <agm-info-window>
+            <div class="cntinfmp">
+              <div class="header_cntmp">
+                <ion-card-subtitle>{{'Mind'}}</ion-card-subtitle>
+                <ion-card-title>{{n.Establecimiento | titlecase}}</ion-card-title>
+              </div>
+              <div class="content_cntmp">
+                {{n.Direccion}}
+              </div>
+              <div  class="footer_cntmap" style="padding: 5%;">
+                <ion-button class="modal-btn" (click)="goToStore(n)" color="secondary" 
+                 expand="block" size="small" style="height: 90%;"> 
+                <label style="color: white;"> {{'Ver' | titlecase}}</label>
+                </ion-button>
+              </div>
+            </div>
+          </agm-info-window>
+    
+        </agm-marker>
+    
+        <agm-circle [latitude]="lat + 0.3" [longitude]="lng" [radius]="5000" [fillColor]="'red'" [circleDraggable]="true"
+          [editable]="true">
+        </agm-circle>-
+      </agm-map>
+      
+    </ng-container>
+    <ng-template #other_content>
+    </ng-template>

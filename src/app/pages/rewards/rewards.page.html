@@ -1,0 +1,31 @@
+<app-header2 [title]="'Recompensas'" [go]="'home'"></app-header2>
+
+<ion-content>
+
+  <div *ngIf="_loginServices==true && !rewards.Id_Asignado; else rewardsExist">
+    <ion-card *ngFor="let reward of rewards" (click)='rewardDetails(reward.Id_Promociones)'>
+      <ion-card-content>
+        <div style="margin: 0 auto;height: 40%;width: 40%;">
+          <img [defaultImage]="commonService.defaultImage" [lazyLoad]="reward.foto">
+        </div>
+        <label>{{reward.Nombre_Promocion}}</label>
+        <div>
+          <label>Puntos: {{reward.cantidad_puntos}}</label>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <ng-template #rewardsExist>
+    <ion-card>
+      <ion-card-content>
+        <div *ngIf="_loginServices==true && rewards.Id_Asignado;" style="text-align: center;">
+          <label>Usted no posee recompensas disponibles</label>
+        </div>
+        <div *ngIf="_loginServices==false" style="text-align: center;">
+          <label> Inicie sesión para acceder a sus recompensas disponibles</label>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </ng-template>
+</ion-content>

@@ -1,0 +1,70 @@
+<app-header2 [title]="'Referidos'" [go]="'home'"></app-header2>
+
+<ion-content class="ion-padding container-shopping">
+
+  <div style="text-align: right;">
+    <ion-button class="button-total" style="width: 30%; " color="secondary" (click)="showPopover($event)">
+      <label class="text-button">Nuevo Referido</label>
+    </ion-button>
+  </div>
+
+  <div style="display: flex; margin-top: 5%;">
+    <div class="center-vh button-style" style="width: 30%; font-size: 12px;height: 40px;">
+      <label>Mostrar</label>
+    </div>
+    <div style="width: 20%; font-size: 12px;  height: 40px;margin-top: -2%;">
+      <ion-item>
+        <ion-select style="width: 100%;" [(ngModel)]="itemsPage" placeholder="5">
+          <ion-select-option value="5" [selected]="5">5</ion-select-option>
+          <ion-select-option value="10">10</ion-select-option>
+          <ion-select-option value="15">15</ion-select-option>
+          <ion-select-option value="20">20</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </div>
+    <div class="center-vh button-style" style="width: 50%; font-size: 12px; height: 40px;">
+      <label>Registros por página</label>
+    </div>
+  </div>
+
+  <div style="width: 100%;margin-top: 10%;">
+
+
+    <div class="table-responsive" style="padding: 15% 2%;">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col" class="space-th-td">Identificación</th>
+            <th scope="col" class="space-th-td">Referido</th>
+            <th scope="col" class="space-th-td">Teléfono</th>
+            <th scope="col" class="space-th-td">Usuario</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <ng-container *ngIf="referrals.length!=0 && referrals.length!=undefined ">
+            <tr *ngFor="let referral of referrals | paginate: { itemsPerPage:itemsPage, currentPage:page } ">
+
+              <td class="space-th-td"> {{referral.Identificacion}} </td>
+              <td class="space-th-td"> {{referral.NombresyApellidos}} </td>
+              <td class="space-th-td"> {{referral.Telefono}} </td>
+              <td class="space-th-td"> {{referral.NickName}} </td>
+
+            </tr>
+            <ng-container *ngIf="referrals.length == 0">
+              No ha realizado ninguna compra
+            </ng-container>
+          </ng-container>
+
+        </tbody>
+      </table>
+      <div style="text-align: center;margin-top: 10%;overflow-x: auto;">
+        <pagination-controls (pageChange)="page = $event" previousLabel="Anterior" nextLabel="Siguiente">
+        </pagination-controls>
+      </div>
+
+    </div>
+
+
+  </div>
+</ion-content>

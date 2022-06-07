@@ -1,0 +1,71 @@
+<div style="background-color: #1A1A1A; height: 100%;">
+  <ion-list lines="none" style="background-color: #1A1A1A;">
+      <app-user-info ></app-user-info>
+      <div *ngIf="this.user != ''" class="ion-padding " style="color: white;">
+
+        <div class="ion-padding" >
+          <div style="text-align: center;display: flex;">
+            <div style="width: 33%;">
+              <div style="display: flex;">
+                <!--<mat-icon style="width: 20px;">people</mat-icon>-->
+                <ion-icon name="person" style="font-size: 24px;"></ion-icon>
+                <ion-label style="margin: 0 auto;">{{this.referralsQtty}}</ion-label>
+              </div>
+              <div style="text-align: center;">
+                <ion-label style="font-size: 11px;">Referidos</ion-label>
+              </div>
+              
+            </div>
+      
+            <div style="width: 33%;">
+              <div style="display: flex; ">
+                <img src="assets/images/logo-axon-15.png" style="width: 22px;" alt="">
+                <ion-label style="margin: 0 auto; color: white;">{{ outstanding_points | number:'1.0-2' }}</ion-label>
+              </div>
+              <div>
+                <ion-label style="font-size: 11px;">Pendientes</ion-label>
+              </div>
+            </div>
+      
+            <div style="width: 33%;">
+              <div style="display: flex; ">
+      
+                <img src="assets/images/logo-axon-15.png" style="width: 22px;" alt="">
+                <ion-label style="margin: 0 auto;">{{available_points | number:'1.0-2'}}</ion-label>
+              </div>
+              <div>
+                <ion-label style="font-size: 11px;">Disponibles</ion-label>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+   <div class="ion-padding"></div>
+      
+
+    <ng-container *ngFor="let item of menuSidebar" style="background-color: #1A1A1A;">
+      <ion-item *ngIf="item.public && ((this.user != '')&&((item.name!='Mi Cuenta')))" button (click)="_method(item)"
+        style="background-color: #1A1A1A !important;" class="item-background-color">
+        <ion-label class="" style="background-color: #1A1A1A;">
+          <h4 >{{item.name | translate| titlecase}} </h4>
+        </ion-label>
+        <ion-badge slot="end" *ngIf="item.isNew" color="danger">{{'NEW' | uppercase}}</ion-badge>
+      </ion-item>
+
+      <ion-item
+        *ngIf="item.public && ((this.user == '')&&((item.name!='Inbox')&&(item.name!='Recompensas')&&(item.name!='Cupones')&&(item.name!='Logout')&&(item.name!='Referidos')&&(item.name!='Mis Compras')&&(item.name!='Mis Transferencias')))"
+        button (click)="_method(item)"  class="item-background-color">
+        <ion-label class="ion-text-wrap">
+          <h4>{{item.name | translate| titlecase}}</h4>
+        </ion-label>
+        <ion-badge slot="end" *ngIf="item.isNew" color="danger">{{'NEW' | uppercase}}</ion-badge>
+      </ion-item>
+
+    </ng-container>
+
+  </ion-list>
+
+  
+ 
+</div>

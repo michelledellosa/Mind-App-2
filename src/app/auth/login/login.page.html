@@ -1,0 +1,59 @@
+<ion-content fullscreen="true" class="ion-padding  color-overlay" id="login_page">
+  <ion-grid>
+    <div style="text-align: right !important; padding: 5px !important;">
+      <p class="grabbing">
+        <a routerLink="/pages/home"> {{'omitir' |  translate | titlecase}} </a>
+      </p>
+    </div>
+    <ion-row class="ion-justify-content-center">
+      <ion-col class="ion-align-self-center" size-md="6" size-lg="5" size-xs="12">
+        <div id="img_settle" class="ion-text-center">
+          <img style="width: 60%;" [src]="commonService.logo" alt="Settle">
+        </div>
+        <div style="padding-top: 30px;">
+          <form (ngSubmit)="login()" [formGroup]="loginForm">
+            <div>
+              <ion-item class="paddingTopInput boxShadow borderRadius">
+                <ion-input required type="email" placeholder="{{'Enter Email'  | translate}}" formControlName="email">
+                </ion-input>
+              </ion-item>
+              <br>
+              <ion-item class="paddingTopInput boxShadow borderRadius">
+                <ion-input [type]="password_type" required placeholder="{{'Enter Password' | translate}}"
+                  formControlName="password">
+                </ion-input>
+                <ion-icon *ngIf="password_type === 'text'" slot="end" [ios]="'eye' + '-outline'" [md]="'eye' + '-sharp'"
+                  (click)="togglePasswordMode()"></ion-icon>
+                <ion-icon *ngIf="password_type === 'password'" slot="end" [ios]="'eye-off' + '-outline'"
+                  [md]="'eye-off' + '-sharp'" (click)="togglePasswordMode()">
+                </ion-icon>
+              </ion-item>
+            </div>
+            <div class="ion-text-center">
+              <h5>
+                <a style="color:aliceblue;" [routerLink]="['/auth/recover-password']">{{'Forgot account' | translate}}
+                </a>
+              </h5>
+            </div>
+            <div class="ion-padding-bottom">
+              <ion-button type="submit" expand="block" class="axl_btn ion-padding">
+                {{'Login' | translate}}
+              </ion-button>
+            </div>
+            <div class="ion-text-center">
+              <a target="_blank" href="/assets/tandc/tandc.pdf">
+                <p> {{'By creating the account you accept the terms and conditions' |  translate}} </p>
+              </a>
+
+            </div>
+            <div class="ion-text-center">
+              <ion-button expand="block" shape="round" class="axl_btn ion-padding" (click)="signUp()">
+                {{'Create New Account' |  translate}}
+              </ion-button>
+            </div>
+          </form>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

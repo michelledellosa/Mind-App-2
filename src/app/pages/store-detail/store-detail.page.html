@@ -1,0 +1,134 @@
+<ion-header>
+  <ion-toolbar [class.show-background]="showToolbar">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{detail.Establecimiento}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <!--   <ion-img class="logo-header" src="assets/images/logo-puntosya.png"></ion-img>-->
+        <ion-img class="logo-header" src="assets/images/logo-2.png"></ion-img>
+
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <div class="datsprn">
+    <!-- Colocar la imagen aca como background -->
+    <div class="cont_dprn">
+
+      <h2>{{detail.Establecimiento}}</h2>
+
+      <div class="itemstdets" style="margin-top:2%;">
+        <ion-icon name="location-outline" color="medium"></ion-icon>
+        <label>{{detail.Direccion}}</label>
+      </div>
+      <div class="itemstdets">
+        <ion-icon name="call-outline" color="medium"></ion-icon>
+        <label>Telf: {{detail.Telefono}}</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="labelstdtls">
+    <div class="icon">
+      <ion-icon name="information-circle-outline"></ion-icon>
+    </div>
+    <div class="text"> INFORMACIÓN COMPLEMENTARIA </div>
+  </div>
+
+  <div class="contedoinfo padding-lateral">
+    <p>{{detail.InformacionComplementaria}}</p>
+  </div>
+
+
+
+  <div class="labelstdtls">
+    <div class="icon">
+      <ion-icon name="alarm-outline"></ion-icon>
+    </div>
+    <div class="text"> HORARIOS </div>
+  </div>
+
+  <div class="contedoinfo padding-lateral">
+    <div>
+      <p>{{detail.Horarios}}</p>
+    </div>
+  </div>
+
+  <!--
+  <div class="labelstdtls">
+    <div class="icon"><ion-icon name="bag-handle-outline"></ion-icon></div>
+    <div class="text"> PRODUCTOS </div>
+    
+  </div>
+
+  <div class="contedoinfo">
+    <div class="ion-text-center" style="margin: 2%;" (click)="goProducts(detail.Id)">
+        <ion-button expand="block" size="small">{{'VER PRODUCTOS' | titlecase}}</ion-button>
+    </div>
+  </div>
+-->
+
+  <div class="labelstdtls">
+    <div class="icon">
+      <ion-icon name="clipboard-outline"></ion-icon>
+    </div>
+    <div class="text"> SERVICIOS </div>
+  </div>
+
+  <div class="contedoinfo padding-lateral">
+    <div>
+      <p>{{detail.Servicios}}</p>
+    </div>
+  </div>
+
+  <div class="labelstdtls">
+    <div class="icon">
+      <ion-icon name="call-outline"></ion-icon>
+    </div>
+    <div class="text"> CONTACTÁNOS </div>
+  </div>
+
+  <div class="contedoinfo ">
+    <div class="redscont">
+      <a class="redc" *ngIf="detail.Facebook!=''" (click)="goSocialNetwork(detail.Facebook)">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </a>
+      <a class="redc" *ngIf="detail.Instagram!=''" (click)="goSocialNetwork(detail.Instagram)">
+        <ion-icon name="logo-instagram"></ion-icon>
+      </a>
+      <a class="redc" *ngIf="detail.Twitter!=''" (click)="goSocialNetwork(detail.Twitter)">
+        <ion-icon name="logo-twitter"></ion-icon>
+      </a>
+      <a class="redc" *ngIf="detail.Youtube!=''" (click)="goSocialNetwork(detail.Youtube)">
+        <ion-icon name="logo-youtube"></ion-icon>
+      </a>
+    </div>
+  </div>
+
+
+  <div class="labelstdtls">
+    <div class="icon">
+      <ion-icon name="people"></ion-icon>
+    </div>
+    <div class="text"> CALIFICACIONES Y OPINIONES</div>
+  </div>
+
+  <!--
+  <div>    
+    <div class="btn-comments"  type="button" (click)="goComments(detail.Id)">
+      <img src="assets/images/comments.png" style="height: 50px;width: 50px;" alt="">
+    </div>
+  </div>
+-->
+
+  <app-comments-videos [recipeId]="recipeId"></app-comments-videos>
+
+
+</ion-content>
+
+
+<app-tab-products style="margin-top: 5%;"></app-tab-products>

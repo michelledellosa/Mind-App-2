@@ -1,0 +1,27 @@
+<app-header2 [title]="'CALIFICANOS'"></app-header2>
+<!--<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-icon (click)="closeModal()" name="close-circle"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-title>CALIFICANOS</ion-title>
+  
+</ion-header>-->
+
+<ion-content style="height: 100%;">
+  <div style="text-align: center;margin-top: 20%;">
+    <h1 style="margin-bottom: 10%;">Del 1 al 5, ¿como nos calificarias?</h1>
+    <label *ngFor="let item of [].constructor(5); let i=index"  >
+      
+      <ion-icon name="star-outline" style="font-size: 5vh;color: #1A1A1A;" (click)="calification=i"></ion-icon>
+    </label>
+    <div class="ion-text-center" style="margin: 2%;">
+      <ion-button  size="small" style="margin-top: 10%;width: 30%;" (click)="calificated()">{{'CALIFICAR' | titlecase}}</ion-button>
+    </div>
+  </div>
+</ion-content>
+

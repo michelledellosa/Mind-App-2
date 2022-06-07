@@ -1,0 +1,17 @@
+<ion-button full expand="block" (click)="recordWithCamare()">
+  Subir Video
+</ion-button>
+
+<br>
+
+<ion-list>
+  <ion-item button *ngFor="let item of items | async" (click)="watchVideo(item)">
+    <ion-avatar slot="start">
+      <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAAAAAAALAAAAAABAAEAAAICTAEAOw==">
+    </ion-avatar>
+    <ion-label class="ion-text-wrap">
+      <h1>{{item.username}}</h1>
+      <p>{{item.created_at | date}}</p>
+    </ion-label>
+  </ion-item>
+</ion-list>

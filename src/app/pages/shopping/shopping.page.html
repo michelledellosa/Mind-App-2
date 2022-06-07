@@ -1,0 +1,91 @@
+<app-header2 [title]="'Mis Compras'" [go]="'home'"></app-header2>
+
+<ion-content class="ion-padding container-shopping" >
+  <div class="title-shopping">
+    Historial Compras
+  </div>  
+
+  <div class="calendar-options">
+    <div class="calendar-inputs" >
+      <div style="margin: 0 auto ;">
+        <input type="date" class="input-date" [(ngModel)]="dateInit" >
+      
+        <input type="date" class="input-date" [(ngModel)]="dateFinish">
+      </div>
+
+  </div>
+
+  <div class="buttton-container">
+    <ion-button class="button-search" style="font-size: 12px;" color="secondary">
+      <label class="text-button" (click)="search(dateInit,dateFinish)" >Buscar</label>
+    </ion-button>
+  </div>
+
+  </div>
+  <div style="display: flex; margin-top: 5%;">
+    <div class="center-vh button-style" style="width: 30%; font-size: 12px;height: 40px;">
+        <label>Mostrar</label>
+    </div>
+    <div style="width: 20%; font-size: 12px;  height: 40px;margin-top: -2%;">
+      <ion-item>
+        
+          <ion-select style="width: 100%;" [(ngModel)]="itemsPage" placeholder="5">
+              <ion-select-option value="5" [selected]="5">5</ion-select-option>
+              <ion-select-option value="10">10</ion-select-option>
+              <ion-select-option value="15">15</ion-select-option>
+              <ion-select-option value="20">20</ion-select-option>
+          </ion-select>
+      </ion-item>
+  </div>
+    <div class="center-vh button-style" style="width: 50%; font-size: 12px; height: 40px;">
+        <label>Registros por página</label>
+    </div>
+
+</div>
+
+  <div class="table-responsive" style="padding: 15% 2%;">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col" class="space-th-td">Establecimiento</th>
+          <th scope="col" class="space-th-td">Descripción</th>
+          <th scope="col" class="space-th-td">Fecha</th>
+          <th scope="col" class="space-th-td">Valor</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <ng-container *ngIf="shoppings.length!=0" >
+          <tr *ngFor="let shopping of shoppings| paginate: { itemsPerPage:itemsPage, currentPage:page }">
+            
+            <td class="space-th-td"> {{storeName[1]}} </td>
+            <td class="space-th-td"> {{shopping.Descripcion}} </td>
+            <td class="space-th-td"> {{shopping.FechaCreacion}} </td>
+            <td class="space-th-td"> {{shopping.Valor_de_venta[0]}} </td>
+           
+          </tr>
+          <ng-container *ngIf="shoppings.length == 0">
+            No ha realizado ninguna compra
+          </ng-container>
+        </ng-container>
+
+      </tbody>
+    </table>
+    <div style="text-align: center;margin-top: 10%;">
+      <pagination-controls 
+      (pageChange)="page = $event" 
+        previousLabel="Anterior" 
+        nextLabel="Siguiente">
+    </pagination-controls>
+    </div>
+    
+  </div>
+
+    <div style="text-align: right;">
+      <ion-button class="button-total" color="secondary">
+        <label class="text-button" >Total Compras {{shoppingLength}}</label>
+      </ion-button>
+    </div>
+  
+ 
+</ion-content>

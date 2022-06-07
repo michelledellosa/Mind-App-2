@@ -1,0 +1,54 @@
+<div class="padding-lateral" style="margin-top: 5%;">
+  <div class="row" style="display: flex;height: 5vh;margin-bottom: 5%;margin-top: 5%;">
+    <div class="col-6" (click)="commentShow=1" [ngClass]="{active: commentShow == 1, inactive: commentShow != 1}">
+      <b>COMENTARIOS</b>
+    </div>
+    <div class="col-6" (click)="commentShow=0" [ngClass]="{active: commentShow == 0, inactive: commentShow != 0}">
+      <b>GALERIA</b>
+    </div>
+  </div>
+
+  <div style="margin-top: 5%;" *ngIf="commentShow==1">
+    <div style=" height: 60vh;overflow: auto;">
+      <div style=" margin-top: 5%;margin-left:5%; margin-right: 5%;border-bottom: 1px solid #FCE19F;"
+        *ngFor="let comment of storeComments">
+        <div>
+          <div>
+            <ion-label style="font-size: 2vh;color:#CC9C61"> {{comment.email}}</ion-label>
+          </div>
+          <div>
+            <label *ngFor="let i of [].constructor(comment.calification)">
+              <ion-icon name="star" style="color:#CC9C61"></ion-icon>
+            </label>
+          </div>
+
+          <p style="font-size: 2vh;">
+            {{comment.comment}}
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div style="margin-top: -10%;height: 100%;">
+      <ion-item>
+        <ion-textarea type="text" rows="5" [(ngModel)]="newComment" style="font-size:2vh"
+          placeholder="Agrega un comenario..."></ion-textarea>
+      </ion-item>
+
+      <div style="margin-top: 3%;text-align: center;">
+        <label (click)="onSubmitData(detail.Id)" style="color: #CC9C61;font-size: 2vh;">
+          <b>AGREGAR COMENTARIO</b>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="commentShow== 0">
+  
+    <app-store-videos *ngIf="recipeId" [recipeId]="recipeId" [id_user]="user.id_login" [email_user]="user.email"></app-store-videos>
+  </div>
+
+</div>

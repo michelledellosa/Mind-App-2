@@ -1,0 +1,79 @@
+<!--<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="centrado titleHeader">Iniciar Sesión</ion-title>
+  </ion-toolbar>
+</ion-header>-->
+
+<app-header2 [title]="'Iniciar Sesión'" [go]="'home'"></app-header2>
+<br>
+<ion-content>
+<ion-card-header  color="#f36b22" text-rigth>
+  <ion-label color="medium">  Si tienes una cuenta con nosotros, inicia sesión. </ion-label> 
+ 
+</ion-card-header>
+
+<form #formulario="ngForm"  (ngSubmit)="onSubmitData()">
+
+  <ion-list no-Line>
+      <ion-item> 
+          <ion-input  type="email" 
+                      name="email" 
+                      [(ngModel)]="usuario.email"  
+                      placeholder="Usuario o Correo Electronico " 
+                      required>
+                  
+          </ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-input  type="password"  
+                      name="password" 
+                      [(ngModel)]="usuario.password"  
+                      placeholder="Contraseña">
+              
+          </ion-input>
+      </ion-item>
+  </ion-list>
+  <br>
+  <br>
+  <ion-grid>
+      <ion-row>
+          <ion-button     expand="full" 
+                          class="boton_tamanio centrado" 
+                          round  style="--background:#CC9C61;"
+
+                          routerLink="/home"
+                          >
+      
+      REGRESAR
+  </ion-button>
+  <ion-button     expand="full" 
+                  type="submit"
+                  
+                  [disabled]="formulario.invalid"
+                  class="boton_tamanio centrado" 
+                  round style="--background:#CC9C61;" 
+                  
+                  >
+              
+                     
+      INICIAR SESIÓN
+  </ion-button>
+
+      </ion-row>
+  </ion-grid>
+      
+  
+
+</form>
+
+<br>
+<br>
+
+             
+  
+                
+  <!--<ion-button class="boton_tamanio margin-left: 100%" ion-button round color="primary" routerLink="/home" >Regresar</ion-button>-->
+
+
+
+</ion-content>

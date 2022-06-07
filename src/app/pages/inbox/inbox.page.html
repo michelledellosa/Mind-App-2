@@ -1,0 +1,18 @@
+<app-header2 [title]="'Inbox'" [go]="'home'"></app-header2>
+<ion-content>
+    <ion-list *ngFor="let notification of userNotification">
+
+        <ion-item *ngIf="_loginServices==true && userNotification.length>0; else inboxExist"
+            (click)="goDetails(notification.id)">
+            <ion-label> {{notification.title}}</ion-label>
+        </ion-item>
+        <ng-template #inboxExist>
+            <div *ngIf="_loginServices==true && userNotification==undefined;">
+                <ion-label> No tiene mensajes en su bandeja de entrada</ion-label>
+            </div>
+            <div *ngIf="_loginServices==false">
+                <ion-label>Inicie sesión para acceder a sus mensajes disponibles </ion-label>
+            </div>
+        </ng-template>
+    </ion-list>
+</ion-content>
