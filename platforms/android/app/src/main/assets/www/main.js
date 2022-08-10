@@ -12,7 +12,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "AlertConfirmComponent": () => (/* binding */ AlertConfirmComponent)
 /* harmony export */ });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! tslib */ 98806);
-/* harmony import */ var _C_Users_user_Documents_Work_Ionic_Angular_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_alert_confirm_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./alert-confirm.component.html */ 50696);
+/* harmony import */ var _C_Users_Genox_Documents_WebSites_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_alert_confirm_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./alert-confirm.component.html */ 50696);
 /* harmony import */ var _alert_confirm_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./alert-confirm.component.scss */ 14679);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 14001);
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ 78099);
@@ -43,7 +43,7 @@ AlertConfirmComponent.propDecorators = {
 AlertConfirmComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_4__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_3__.Component)({
         selector: 'app-alert-confirm',
-        template: _C_Users_user_Documents_Work_Ionic_Angular_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_alert_confirm_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
+        template: _C_Users_Genox_Documents_WebSites_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_alert_confirm_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
         styles: [_alert_confirm_component_scss__WEBPACK_IMPORTED_MODULE_1__]
     })
 ], AlertConfirmComponent);
@@ -64,7 +64,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "AlertComponent": () => (/* binding */ AlertComponent)
 /* harmony export */ });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! tslib */ 98806);
-/* harmony import */ var _C_Users_user_Documents_Work_Ionic_Angular_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_alert_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./alert.component.html */ 97527);
+/* harmony import */ var _C_Users_Genox_Documents_WebSites_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_alert_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./alert.component.html */ 97527);
 /* harmony import */ var _alert_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./alert.component.scss */ 7279);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 14001);
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ 78099);
@@ -97,7 +97,7 @@ AlertComponent.propDecorators = {
 AlertComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_4__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_3__.Component)({
         selector: 'app-alert',
-        template: _C_Users_user_Documents_Work_Ionic_Angular_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_alert_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
+        template: _C_Users_Genox_Documents_WebSites_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_alert_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
         styles: [_alert_component_scss__WEBPACK_IMPORTED_MODULE_1__]
     })
 ], AlertComponent);
@@ -319,7 +319,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "AppComponent": () => (/* binding */ AppComponent)
 /* harmony export */ });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! tslib */ 98806);
-/* harmony import */ var _C_Users_user_Documents_Work_Ionic_Angular_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_app_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./app.component.html */ 75158);
+/* harmony import */ var _C_Users_Genox_Documents_WebSites_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_app_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./app.component.html */ 75158);
 /* harmony import */ var _app_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app.component.scss */ 30836);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/core */ 14001);
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @ionic/angular */ 78099);
@@ -481,7 +481,7 @@ AppComponent.ctorParameters = () => [
 AppComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_12__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_15__.Component)({
         selector: 'app-root',
-        template: _C_Users_user_Documents_Work_Ionic_Angular_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_app_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
+        template: _C_Users_Genox_Documents_WebSites_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_app_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
         styles: [_app_component_scss__WEBPACK_IMPORTED_MODULE_1__]
     })
 ], AppComponent);
@@ -696,7 +696,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "CommentsVideosComponent": () => (/* binding */ CommentsVideosComponent)
 /* harmony export */ });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! tslib */ 98806);
-/* harmony import */ var _C_Users_user_Documents_Work_Ionic_Angular_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_comments_videos_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./comments-videos.component.html */ 58455);
+/* harmony import */ var _C_Users_Genox_Documents_WebSites_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_comments_videos_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./comments-videos.component.html */ 58455);
 /* harmony import */ var _comments_videos_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./comments-videos.component.scss */ 64568);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/core */ 14001);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/router */ 13252);
@@ -795,7 +795,7 @@ CommentsVideosComponent.propDecorators = {
 CommentsVideosComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_6__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_9__.Component)({
         selector: 'app-comments-videos',
-        template: _C_Users_user_Documents_Work_Ionic_Angular_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_comments_videos_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
+        template: _C_Users_Genox_Documents_WebSites_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_comments_videos_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
         styles: [_comments_videos_component_scss__WEBPACK_IMPORTED_MODULE_1__]
     })
 ], CommentsVideosComponent);
@@ -936,7 +936,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "GpsMapComponent": () => (/* binding */ GpsMapComponent)
 /* harmony export */ });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! tslib */ 98806);
-/* harmony import */ var _C_Users_user_Documents_Work_Ionic_Angular_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_gps_map_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./gps-map.component.html */ 46677);
+/* harmony import */ var _C_Users_Genox_Documents_WebSites_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_gps_map_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./gps-map.component.html */ 46677);
 /* harmony import */ var _gps_map_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./gps-map.component.scss */ 52972);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/core */ 14001);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ 13252);
@@ -1066,7 +1066,7 @@ GpsMapComponent.propDecorators = {
 GpsMapComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_4__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_6__.Component)({
         selector: 'app-gps-map',
-        template: _C_Users_user_Documents_Work_Ionic_Angular_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_gps_map_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
+        template: _C_Users_Genox_Documents_WebSites_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_gps_map_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
         styles: [_gps_map_component_scss__WEBPACK_IMPORTED_MODULE_1__]
     })
 ], GpsMapComponent);
@@ -1087,7 +1087,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "HeaderComponent": () => (/* binding */ HeaderComponent)
 /* harmony export */ });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tslib */ 98806);
-/* harmony import */ var _C_Users_user_Documents_Work_Ionic_Angular_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_header_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./header.component.html */ 20669);
+/* harmony import */ var _C_Users_Genox_Documents_WebSites_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_header_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./header.component.html */ 20669);
 /* harmony import */ var _header_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./header.component.scss */ 70228);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 14001);
 
@@ -1106,7 +1106,7 @@ HeaderComponent.propDecorators = {
 HeaderComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_2__.Component)({
         selector: 'app-header2',
-        template: _C_Users_user_Documents_Work_Ionic_Angular_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_header_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
+        template: _C_Users_Genox_Documents_WebSites_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_header_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
         styles: [_header_component_scss__WEBPACK_IMPORTED_MODULE_1__]
     })
 ], HeaderComponent);
@@ -1127,7 +1127,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "MapComponent": () => (/* binding */ MapComponent)
 /* harmony export */ });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! tslib */ 98806);
-/* harmony import */ var _C_Users_user_Documents_Work_Ionic_Angular_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_map_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./map.component.html */ 58531);
+/* harmony import */ var _C_Users_Genox_Documents_WebSites_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_map_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./map.component.html */ 58531);
 /* harmony import */ var _map_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./map.component.scss */ 80670);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/core */ 14001);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ 13252);
@@ -1284,7 +1284,7 @@ MapComponent.ctorParameters = () => [
 MapComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_5__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_6__.Component)({
         selector: 'app-map',
-        template: _C_Users_user_Documents_Work_Ionic_Angular_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_map_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
+        template: _C_Users_Genox_Documents_WebSites_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_map_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
         styles: [_map_component_scss__WEBPACK_IMPORTED_MODULE_1__]
     })
 ], MapComponent);
@@ -1305,7 +1305,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "ModalCalificateComponent": () => (/* binding */ ModalCalificateComponent)
 /* harmony export */ });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! tslib */ 98806);
-/* harmony import */ var _C_Users_user_Documents_Work_Ionic_Angular_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_modal_calificate_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./modal-calificate.component.html */ 31319);
+/* harmony import */ var _C_Users_Genox_Documents_WebSites_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_modal_calificate_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./modal-calificate.component.html */ 31319);
 /* harmony import */ var _modal_calificate_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modal-calificate.component.scss */ 34945);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/core */ 14001);
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic/angular */ 78099);
@@ -1357,7 +1357,7 @@ ModalCalificateComponent.ctorParameters = () => [
 ModalCalificateComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_6__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_7__.Component)({
         selector: 'app-modal-calificate',
-        template: _C_Users_user_Documents_Work_Ionic_Angular_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_modal_calificate_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
+        template: _C_Users_Genox_Documents_WebSites_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_modal_calificate_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
         styles: [_modal_calificate_component_scss__WEBPACK_IMPORTED_MODULE_1__]
     })
 ], ModalCalificateComponent);
@@ -1378,7 +1378,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "NewReferralComponent": () => (/* binding */ NewReferralComponent)
 /* harmony export */ });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! tslib */ 98806);
-/* harmony import */ var _C_Users_user_Documents_Work_Ionic_Angular_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_new_referral_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./new-referral.component.html */ 51756);
+/* harmony import */ var _C_Users_Genox_Documents_WebSites_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_new_referral_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./new-referral.component.html */ 51756);
 /* harmony import */ var _new_referral_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./new-referral.component.scss */ 76604);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 14001);
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic/angular */ 78099);
@@ -1423,7 +1423,7 @@ NewReferralComponent.ctorParameters = () => [
 NewReferralComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_4__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_5__.Component)({
         selector: 'app-new-referral',
-        template: _C_Users_user_Documents_Work_Ionic_Angular_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_new_referral_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
+        template: _C_Users_Genox_Documents_WebSites_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_new_referral_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
         styles: [_new_referral_component_scss__WEBPACK_IMPORTED_MODULE_1__]
     })
 ], NewReferralComponent);
@@ -1444,7 +1444,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "NotFoundComponent": () => (/* binding */ NotFoundComponent)
 /* harmony export */ });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! tslib */ 98806);
-/* harmony import */ var _C_Users_user_Documents_Work_Ionic_Angular_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_not_found_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./not-found.component.html */ 58317);
+/* harmony import */ var _C_Users_Genox_Documents_WebSites_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_not_found_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./not-found.component.html */ 58317);
 /* harmony import */ var _not_found_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./not-found.component.scss */ 95095);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 14001);
 
@@ -1459,7 +1459,7 @@ NotFoundComponent.ctorParameters = () => [];
 NotFoundComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_3__.Component)({
         selector: 'app-not-found',
-        template: _C_Users_user_Documents_Work_Ionic_Angular_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_not_found_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
+        template: _C_Users_Genox_Documents_WebSites_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_not_found_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
         styles: [_not_found_component_scss__WEBPACK_IMPORTED_MODULE_1__]
     })
 ], NotFoundComponent);
@@ -1480,7 +1480,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "PopoverCalendarComponent": () => (/* binding */ PopoverCalendarComponent)
 /* harmony export */ });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! tslib */ 98806);
-/* harmony import */ var _C_Users_user_Documents_Work_Ionic_Angular_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_popover_calendar_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./popover-calendar.component.html */ 3782);
+/* harmony import */ var _C_Users_Genox_Documents_WebSites_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_popover_calendar_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./popover-calendar.component.html */ 3782);
 /* harmony import */ var _popover_calendar_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./popover-calendar.component.scss */ 34459);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/core */ 14001);
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic/angular */ 78099);
@@ -1526,7 +1526,7 @@ PopoverCalendarComponent.ctorParameters = () => [
 PopoverCalendarComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_5__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_6__.Component)({
         selector: 'app-popover-calendar',
-        template: _C_Users_user_Documents_Work_Ionic_Angular_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_popover_calendar_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
+        template: _C_Users_Genox_Documents_WebSites_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_popover_calendar_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
         styles: [_popover_calendar_component_scss__WEBPACK_IMPORTED_MODULE_1__]
     })
 ], PopoverCalendarComponent);
@@ -1547,7 +1547,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "SearchbarComponent": () => (/* binding */ SearchbarComponent)
 /* harmony export */ });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! tslib */ 98806);
-/* harmony import */ var _C_Users_user_Documents_Work_Ionic_Angular_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_searchbar_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./searchbar.component.html */ 94811);
+/* harmony import */ var _C_Users_Genox_Documents_WebSites_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_searchbar_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./searchbar.component.html */ 94811);
 /* harmony import */ var _searchbar_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./searchbar.component.scss */ 87399);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 14001);
 /* harmony import */ var src_app_services_categories_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/categories.service */ 36983);
@@ -1603,7 +1603,7 @@ SearchbarComponent.propDecorators = {
 SearchbarComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_4__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_3__.Component)({
         selector: 'app-searchbar',
-        template: _C_Users_user_Documents_Work_Ionic_Angular_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_searchbar_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
+        template: _C_Users_Genox_Documents_WebSites_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_searchbar_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
         styles: [_searchbar_component_scss__WEBPACK_IMPORTED_MODULE_1__]
     })
 ], SearchbarComponent);
@@ -1624,7 +1624,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "SpinnerComponent": () => (/* binding */ SpinnerComponent)
 /* harmony export */ });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! tslib */ 98806);
-/* harmony import */ var _C_Users_user_Documents_Work_Ionic_Angular_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_spinner_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./spinner.component.html */ 84972);
+/* harmony import */ var _C_Users_Genox_Documents_WebSites_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_spinner_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./spinner.component.html */ 84972);
 /* harmony import */ var _spinner_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./spinner.component.scss */ 51230);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 14001);
 
@@ -1644,7 +1644,7 @@ SpinnerComponent.ctorParameters = () => [];
 SpinnerComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_3__.Component)({
         selector: 'app-spinner',
-        template: _C_Users_user_Documents_Work_Ionic_Angular_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_spinner_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
+        template: _C_Users_Genox_Documents_WebSites_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_spinner_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
         styles: [_spinner_component_scss__WEBPACK_IMPORTED_MODULE_1__]
     })
 ], SpinnerComponent);
@@ -1665,7 +1665,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "StoreVideosComponent": () => (/* binding */ StoreVideosComponent)
 /* harmony export */ });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! tslib */ 98806);
-/* harmony import */ var _C_Users_user_Documents_Work_Ionic_Angular_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_store_videos_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./store-videos.component.html */ 8996);
+/* harmony import */ var _C_Users_Genox_Documents_WebSites_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_store_videos_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./store-videos.component.html */ 8996);
 /* harmony import */ var _store_videos_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./store-videos.component.scss */ 89120);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/core */ 14001);
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @ionic/angular */ 78099);
@@ -1919,7 +1919,7 @@ StoreVideosComponent.propDecorators = {
 StoreVideosComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_10__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_15__.Component)({
         selector: 'app-store-videos',
-        template: _C_Users_user_Documents_Work_Ionic_Angular_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_store_videos_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
+        template: _C_Users_Genox_Documents_WebSites_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_store_videos_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
         styles: [_store_videos_component_scss__WEBPACK_IMPORTED_MODULE_1__]
     })
 ], StoreVideosComponent);
@@ -1940,7 +1940,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "StoresComponent": () => (/* binding */ StoresComponent)
 /* harmony export */ });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! tslib */ 98806);
-/* harmony import */ var _C_Users_user_Documents_Work_Ionic_Angular_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_stores_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./stores.component.html */ 60950);
+/* harmony import */ var _C_Users_Genox_Documents_WebSites_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_stores_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./stores.component.html */ 60950);
 /* harmony import */ var _stores_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./stores.component.scss */ 69153);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/core */ 14001);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/router */ 13252);
@@ -2079,7 +2079,7 @@ StoresComponent.propDecorators = {
 StoresComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_8__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_6__.Component)({
         selector: 'app-stores',
-        template: _C_Users_user_Documents_Work_Ionic_Angular_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_stores_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
+        template: _C_Users_Genox_Documents_WebSites_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_stores_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
         styles: [_stores_component_scss__WEBPACK_IMPORTED_MODULE_1__]
     })
 ], StoresComponent);
@@ -2100,7 +2100,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "TabProductsComponent": () => (/* binding */ TabProductsComponent)
 /* harmony export */ });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! tslib */ 98806);
-/* harmony import */ var _C_Users_user_Documents_Work_Ionic_Angular_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_tab_products_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./tab-products.component.html */ 84943);
+/* harmony import */ var _C_Users_Genox_Documents_WebSites_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_tab_products_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./tab-products.component.html */ 84943);
 /* harmony import */ var _tab_products_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./tab-products.component.scss */ 286);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/core */ 14001);
 /* harmony import */ var _awesome_cordova_plugins_call_number_ngx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @awesome-cordova-plugins/call-number/ngx */ 53831);
@@ -2192,7 +2192,7 @@ TabProductsComponent.propDecorators = {
 TabProductsComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_7__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_9__.Component)({
         selector: 'app-tab-products',
-        template: _C_Users_user_Documents_Work_Ionic_Angular_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_tab_products_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
+        template: _C_Users_Genox_Documents_WebSites_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_tab_products_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
         styles: [_tab_products_component_scss__WEBPACK_IMPORTED_MODULE_1__]
     })
 ], TabProductsComponent);
@@ -2213,7 +2213,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "UserInfoComponent": () => (/* binding */ UserInfoComponent)
 /* harmony export */ });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! tslib */ 98806);
-/* harmony import */ var _C_Users_user_Documents_Work_Ionic_Angular_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_user_info_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./user-info.component.html */ 39509);
+/* harmony import */ var _C_Users_Genox_Documents_WebSites_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_user_info_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./user-info.component.html */ 39509);
 /* harmony import */ var _user_info_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./user-info.component.scss */ 57076);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 14001);
 /* harmony import */ var src_app_services_login_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/login.service */ 53755);
@@ -2252,7 +2252,7 @@ UserInfoComponent.ctorParameters = () => [
 UserInfoComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_4__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_5__.Component)({
         selector: 'app-user-info',
-        template: _C_Users_user_Documents_Work_Ionic_Angular_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_user_info_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
+        template: _C_Users_Genox_Documents_WebSites_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_user_info_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
         styles: [_user_info_component_scss__WEBPACK_IMPORTED_MODULE_1__]
     })
 ], UserInfoComponent);
@@ -2273,7 +2273,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "WebviewTabComponent": () => (/* binding */ WebviewTabComponent)
 /* harmony export */ });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! tslib */ 98806);
-/* harmony import */ var _C_Users_user_Documents_Work_Ionic_Angular_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_webview_tab_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./webview-tab.component.html */ 95675);
+/* harmony import */ var _C_Users_Genox_Documents_WebSites_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_webview_tab_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./webview-tab.component.html */ 95675);
 /* harmony import */ var _webview_tab_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./webview-tab.component.scss */ 69405);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 14001);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ 13252);
@@ -2308,7 +2308,7 @@ WebviewTabComponent.propDecorators = {
 WebviewTabComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_4__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_3__.Component)({
         selector: 'app-webview-tab',
-        template: _C_Users_user_Documents_Work_Ionic_Angular_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_webview_tab_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
+        template: _C_Users_Genox_Documents_WebSites_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_webview_tab_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
         styles: [_webview_tab_component_scss__WEBPACK_IMPORTED_MODULE_1__]
     })
 ], WebviewTabComponent);
@@ -2704,7 +2704,7 @@ let CategoriesService = class CategoriesService {
             this.userData = res;
         });
         let headers = {
-            'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI3MTY1OTMyOCIsImlhdCI6MTYzNjkzMDIyM30.JAcX2qUQ5HdZ8WBTroamKnjPvlPOKoANG-r1Pl8Cm0k' //this.userData.token
+            'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiIxMDEyMzQwMjIwIiwiaWF0IjoxNjU4OTI3MDk5fQ.sMAeTi21RqfHKJEfVVq6Mb2qMeZXXt3K6-j1jJ-cNYA' //this.userData.token
         };
         let body = {
             'cualSP': 4
@@ -2720,7 +2720,7 @@ let CategoriesService = class CategoriesService {
             longitude = response.position.lng;
         });
         let headers = {
-            'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI3MTY1OTMyOCIsImlhdCI6MTYzNjkzMDIyM30.JAcX2qUQ5HdZ8WBTroamKnjPvlPOKoANG-r1Pl8Cm0k' //this.userData.token
+            'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiIxMDEyMzQwMjIwIiwiaWF0IjoxNjU4OTI3MDk5fQ.sMAeTi21RqfHKJEfVVq6Mb2qMeZXXt3K6-j1jJ-cNYA' //this.userData.token
         };
         let body = {
             'cualsp': '20',
@@ -3967,7 +3967,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "GridComponent": () => (/* binding */ GridComponent)
 /* harmony export */ });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tslib */ 98806);
-/* harmony import */ var _C_Users_user_Documents_Work_Ionic_Angular_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_grid_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./grid.component.html */ 76487);
+/* harmony import */ var _C_Users_Genox_Documents_WebSites_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_grid_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./grid.component.html */ 76487);
 /* harmony import */ var _grid_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./grid.component.scss */ 16304);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 14001);
 
@@ -3991,7 +3991,7 @@ GridComponent.propDecorators = {
 GridComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_2__.Component)({
         selector: 'app-grid',
-        template: _C_Users_user_Documents_Work_Ionic_Angular_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_grid_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
+        template: _C_Users_Genox_Documents_WebSites_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_grid_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
         styles: [_grid_component_scss__WEBPACK_IMPORTED_MODULE_1__]
     })
 ], GridComponent);
@@ -4012,7 +4012,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "HeaderBackComponent": () => (/* binding */ HeaderBackComponent)
 /* harmony export */ });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tslib */ 98806);
-/* harmony import */ var _C_Users_user_Documents_Work_Ionic_Angular_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_header_back_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./header-back.component.html */ 37118);
+/* harmony import */ var _C_Users_Genox_Documents_WebSites_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_header_back_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./header-back.component.html */ 37118);
 /* harmony import */ var _header_back_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./header-back.component.scss */ 41551);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 14001);
 
@@ -4030,7 +4030,7 @@ HeaderBackComponent.propDecorators = {
 HeaderBackComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_2__.Component)({
         selector: 'app-header-back',
-        template: _C_Users_user_Documents_Work_Ionic_Angular_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_header_back_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
+        template: _C_Users_Genox_Documents_WebSites_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_header_back_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
         styles: [_header_back_component_scss__WEBPACK_IMPORTED_MODULE_1__]
     })
 ], HeaderBackComponent);
@@ -4051,7 +4051,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "HeaderComponent": () => (/* binding */ HeaderComponent)
 /* harmony export */ });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! tslib */ 98806);
-/* harmony import */ var _C_Users_user_Documents_Work_Ionic_Angular_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_header_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./header.component.html */ 15351);
+/* harmony import */ var _C_Users_Genox_Documents_WebSites_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_header_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./header.component.html */ 15351);
 /* harmony import */ var _header_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./header.component.scss */ 87561);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 14001);
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ 78099);
@@ -4082,7 +4082,7 @@ HeaderComponent.propDecorators = {
 HeaderComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_4__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_3__.Component)({
         selector: 'app-header',
-        template: _C_Users_user_Documents_Work_Ionic_Angular_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_header_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
+        template: _C_Users_Genox_Documents_WebSites_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_header_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
         styles: [_header_component_scss__WEBPACK_IMPORTED_MODULE_1__]
     })
 ], HeaderComponent);
@@ -4181,7 +4181,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "SidebarMenuComponent": () => (/* binding */ SidebarMenuComponent)
 /* harmony export */ });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! tslib */ 98806);
-/* harmony import */ var _C_Users_user_Documents_Work_Ionic_Angular_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_sidebar_menu_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./sidebar-menu.component.html */ 42045);
+/* harmony import */ var _C_Users_Genox_Documents_WebSites_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_sidebar_menu_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./sidebar-menu.component.html */ 42045);
 /* harmony import */ var _sidebar_menu_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sidebar-menu.component.scss */ 84450);
 /* harmony import */ var _services_common_common_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../../services/common/common.service */ 8735);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/core */ 14001);
@@ -4475,7 +4475,7 @@ SidebarMenuComponent.ctorParameters = () => [
 SidebarMenuComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_8__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_11__.Component)({
         selector: 'app-sidebar-menu',
-        template: _C_Users_user_Documents_Work_Ionic_Angular_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_sidebar_menu_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
+        template: _C_Users_Genox_Documents_WebSites_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_sidebar_menu_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
         styles: [_sidebar_menu_component_scss__WEBPACK_IMPORTED_MODULE_1__]
     })
 ], SidebarMenuComponent);
@@ -4502,10 +4502,10 @@ const environment = {
     account: "https://unipedidos.azurewebsites.net/",
     API_KEY_GOOGLE_MAPS: "AIzaSyBXacUor2PuGqwh7gJeiH7JzI0DXPD0HII",
     API: "https://neuron-red-post-api.azurewebsites.net",
-    production: false,
+    production: true,
     functions: "",
     productDetails: "https://unipedidos.azurewebsites.net/shoppingorders/",
-    token_test: "'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI3MTY1OTMyOCIsImlhdCI6MTYzNjkzMDIyM30.JAcX2qUQ5HdZ8WBTroamKnjPvlPOKoANG-r1Pl8Cm0k'",
+    token_test: "'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiIxMDEyMzQwMjIwIiwiaWF0IjoxNjU4OTI3MDk5fQ.sMAeTi21RqfHKJEfVVq6Mb2qMeZXXt3K6-j1jJ-cNYA'",
     firebaseConfig: {
         apiKey: "AIzaSyCNOKKuUq4F_oSNkIOyTrdpqySgyBzbg8E",
         authDomain: "puntosya-9440d.firebaseapp.com",
@@ -4813,7 +4813,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<ion-app>\n  <ion-split-pane when=\"true\" contentId=\"main-content\">\n    <ion-menu side=\"start\" menuId=\"first\" contentId=\"main-content\" class=\"my-custom-menu\">\n      <ion-content style=\"height: 80%;\">\n        <app-sidebar-menu></app-sidebar-menu>\n      </ion-content>\n    </ion-menu>\n    <ion-router-outlet id=\"main-content\"></ion-router-outlet>\n  </ion-split-pane>\n</ion-app>");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<ion-app>\r\n  <ion-split-pane when=\"true\" contentId=\"main-content\">\r\n    <ion-menu side=\"start\" menuId=\"first\" contentId=\"main-content\" class=\"my-custom-menu\">\r\n      <ion-content style=\"height: 80%;\">\r\n        <app-sidebar-menu></app-sidebar-menu>\r\n      </ion-content>\r\n    </ion-menu>\r\n    <ion-router-outlet id=\"main-content\"></ion-router-outlet>\r\n  </ion-split-pane>\r\n</ion-app>");
 
 /***/ }),
 
@@ -4828,7 +4828,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<div class=\"padding-lateral\" style=\"margin-top: 5%;\">\n  <div class=\"row\" style=\"display: flex;height: 5vh;margin-bottom: 5%;margin-top: 5%;\">\n    <div class=\"col-6\" (click)=\"commentShow=1\" [ngClass]=\"{active: commentShow == 1, inactive: commentShow != 1}\">\n      <b>COMENTARIOS</b>\n    </div>\n    <div class=\"col-6\" (click)=\"commentShow=0\" [ngClass]=\"{active: commentShow == 0, inactive: commentShow != 0}\">\n      <b>GALERIA</b>\n    </div>\n  </div>\n\n  <div style=\"margin-top: 5%;\" *ngIf=\"commentShow==1\">\n    <div style=\" height: 60vh;overflow: auto;\">\n      <div style=\" margin-top: 5%;margin-left:5%; margin-right: 5%;border-bottom: 1px solid #FCE19F;\"\n        *ngFor=\"let comment of storeComments\">\n        <div>\n          <div>\n            <ion-label style=\"font-size: 2vh;color:#CC9C61\"> {{comment.email}}</ion-label>\n          </div>\n          <div>\n            <label *ngFor=\"let i of [].constructor(comment.calification)\">\n              <ion-icon name=\"star\" style=\"color:#CC9C61\"></ion-icon>\n            </label>\n          </div>\n\n          <p style=\"font-size: 2vh;\">\n            {{comment.comment}}\n          </p>\n        </div>\n\n      </div>\n\n    </div>\n\n\n    <div style=\"margin-top: -10%;height: 100%;\">\n      <ion-item>\n        <ion-textarea type=\"text\" rows=\"5\" [(ngModel)]=\"newComment\" style=\"font-size:2vh\"\n          placeholder=\"Agrega un comenario...\"></ion-textarea>\n      </ion-item>\n\n      <div style=\"margin-top: 3%;text-align: center;\">\n        <label (click)=\"onSubmitData(detail.Id)\" style=\"color: #CC9C61;font-size: 2vh;\">\n          <b>AGREGAR COMENTARIO</b>\n        </label>\n      </div>\n    </div>\n  </div>\n\n  <div *ngIf=\"commentShow== 0\">\n  \n    <app-store-videos *ngIf=\"recipeId\" [recipeId]=\"recipeId\" [id_user]=\"user.id_login\" [email_user]=\"user.email\"></app-store-videos>\n  </div>\n\n</div>\n");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<div class=\"padding-lateral\" style=\"margin-top: 5%;\">\r\n  <div class=\"row\" style=\"display: flex;height: 5vh;margin-bottom: 5%;margin-top: 5%;\">\r\n    <div class=\"col-6\" (click)=\"commentShow=1\" [ngClass]=\"{active: commentShow == 1, inactive: commentShow != 1}\">\r\n      <b>COMENTARIOS</b>\r\n    </div>\r\n    <div class=\"col-6\" (click)=\"commentShow=0\" [ngClass]=\"{active: commentShow == 0, inactive: commentShow != 0}\">\r\n      <b>GALERIA</b>\r\n    </div>\r\n  </div>\r\n\r\n  <div style=\"margin-top: 5%;\" *ngIf=\"commentShow==1\">\r\n    <div style=\" height: 60vh;overflow: auto;\">\r\n      <div style=\" margin-top: 5%;margin-left:5%; margin-right: 5%;border-bottom: 1px solid #FCE19F;\"\r\n        *ngFor=\"let comment of storeComments\">\r\n        <div>\r\n          <div>\r\n            <ion-label style=\"font-size: 2vh;color:#CC9C61\"> {{comment.email}}</ion-label>\r\n          </div>\r\n          <div>\r\n            <label *ngFor=\"let i of [].constructor(comment.calification)\">\r\n              <ion-icon name=\"star\" style=\"color:#CC9C61\"></ion-icon>\r\n            </label>\r\n          </div>\r\n\r\n          <p style=\"font-size: 2vh;\">\r\n            {{comment.comment}}\r\n          </p>\r\n        </div>\r\n\r\n      </div>\r\n\r\n    </div>\r\n\r\n\r\n    <div style=\"margin-top: -10%;height: 100%;\">\r\n      <ion-item>\r\n        <ion-textarea type=\"text\" rows=\"5\" [(ngModel)]=\"newComment\" style=\"font-size:2vh\"\r\n          placeholder=\"Agrega un comenario...\"></ion-textarea>\r\n      </ion-item>\r\n\r\n      <div style=\"margin-top: 3%;text-align: center;\">\r\n        <label (click)=\"onSubmitData(detail.Id)\" style=\"color: #CC9C61;font-size: 2vh;\">\r\n          <b>AGREGAR COMENTARIO</b>\r\n        </label>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <div *ngIf=\"commentShow== 0\">\r\n  \r\n    <app-store-videos *ngIf=\"recipeId\" [recipeId]=\"recipeId\" [id_user]=\"user.id_login\" [email_user]=\"user.email\"></app-store-videos>\r\n  </div>\r\n\r\n</div>\r\n");
 
 /***/ }),
 
@@ -4903,7 +4903,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<div>\n    <div style=\"background-color: #CC9C61; font-weight: bold; color: white; text-align: center;padding-top: 3%;padding-bottom:3% ;\">\n    Generar Referido\n  </div>\n  <div class=\"ion-padding\">\n    <label >{{urlReferral}}</label>\n  </div>\n\n  <div class=\"align-center\">\n    <ion-button   (click)=\"getDates()\" style=\"height: 30px; font-size: 12px;\" color=\"secondary\">\n        <label class=\"button-style\">COPIAR</label>\n    </ion-button>\n  </div> \n</div>\n");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<div>\r\n    <div style=\"background-color: #CC9C61; font-weight: bold; color: white; text-align: center;padding-top: 3%;padding-bottom:3% ;\">\r\n    Generar Referido\r\n  </div>\r\n  <div class=\"ion-padding\">\r\n    <label >{{urlReferral}}</label>\r\n  </div>\r\n\r\n  <div class=\"align-center\">\r\n    <ion-button   (click)=\"getDates()\" style=\"height: 30px; font-size: 12px;\" color=\"secondary\">\r\n        <label class=\"button-style\">COPIAR</label>\r\n    </ion-button>\r\n  </div> \r\n</div>\r\n");
 
 /***/ }),
 
@@ -4933,7 +4933,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<div>\n  <ion-calendar \n  [(ngModel)]=\"dateMulti\"\n    [type]=\"type\"\n    [format]=\"'yyyy-MM-dd'\"\n \n    [min]=\"01/01/1990\"\n    >\n\n  </ion-calendar>\n\n  <div class=\"align-center\">\n    <ion-button (click)=\"getDates()\">\n        Añadir Fecha\n    </ion-button>\n  </div> \n</div>");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<div>\r\n  <ion-calendar \r\n  [(ngModel)]=\"dateMulti\"\r\n    [type]=\"type\"\r\n    [format]=\"'yyyy-MM-dd'\"\r\n \r\n    [min]=\"01/01/1990\"\r\n    >\r\n\r\n  </ion-calendar>\r\n\r\n  <div class=\"align-center\">\r\n    <ion-button (click)=\"getDates()\">\r\n        Añadir Fecha\r\n    </ion-button>\r\n  </div> \r\n</div>");
 
 /***/ }),
 
@@ -5023,7 +5023,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<div style=\"background-color: #1A1A1A;\">\n  <ion-label class=\"ion-text-wrap\" style=\"background-color: #1A1A1A;\">\n    <div style=\"text-align: center; background-color: #1A1A1A; margin-top: 15%;\">\n\n      <img src=\"assets/images/logo_circle.png\" style=\"width:100px;height: 100px;\" alt=\"\">\n    </div>\n    <div class=\"center-text ion-padding\" style=\"color: white;\">\n      <h2 class=\"user_name\">{{ user}} </h2>\n\n     \n    </div>\n  </ion-label>\n</div>");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<div style=\"background-color: #1A1A1A;\">\r\n  <ion-label class=\"ion-text-wrap\" style=\"background-color: #1A1A1A;\">\r\n    <div style=\"text-align: center; background-color: #1A1A1A; margin-top: 15%;\">\r\n\r\n      <img src=\"assets/images/logo_circle.png\" style=\"width:100px;height: 100px;\" alt=\"\">\r\n    </div>\r\n    <div class=\"center-text ion-padding\" style=\"color: white;\">\r\n      <h2 class=\"user_name\">{{ user}} </h2>\r\n\r\n     \r\n    </div>\r\n  </ion-label>\r\n</div>");
 
 /***/ }),
 
@@ -5038,7 +5038,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<ion-tab-bar slot=\"bottom\" class=\"tabs-color\" >\n  <ion-tab-button class=\"tabs-color\" (click)=\"getBack()\" style=\"display: flex;\">\n    <ion-label>REGRESAR</ion-label>\n  </ion-tab-button>\n</ion-tab-bar>\n");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<ion-tab-bar slot=\"bottom\" class=\"tabs-color\" >\r\n  <ion-tab-button class=\"tabs-color\" (click)=\"getBack()\" style=\"display: flex;\">\r\n    <ion-label>REGRESAR</ion-label>\r\n  </ion-tab-button>\r\n</ion-tab-bar>\r\n");
 
 /***/ }),
 

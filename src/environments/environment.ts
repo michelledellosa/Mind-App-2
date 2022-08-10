@@ -6,10 +6,10 @@ export const environment = {
   account: "https://unipedidos.azurewebsites.net/",
   API_KEY_GOOGLE_MAPS: "AIzaSyBXacUor2PuGqwh7gJeiH7JzI0DXPD0HII",
   API:"https://neuron-red-post-api.azurewebsites.net",
-  production: false,  
+  production: true,  
   functions: "",
   productDetails: "https://unipedidos.azurewebsites.net/shoppingorders/",
-  token_test:"'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI3MTY1OTMyOCIsImlhdCI6MTYzNjkzMDIyM30.JAcX2qUQ5HdZ8WBTroamKnjPvlPOKoANG-r1Pl8Cm0k'",
+  token_test:"'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiIxMDEyMzQwMjIwIiwiaWF0IjoxNjU4OTI3MDk5fQ.sMAeTi21RqfHKJEfVVq6Mb2qMeZXXt3K6-j1jJ-cNYA'",
 
   firebaseConfig: {
     apiKey: "AIzaSyCNOKKuUq4F_oSNkIOyTrdpqySgyBzbg8E",

@@ -444,6 +444,22 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       ]
     },
     {
+      "id": "cordova-plugin-network-information.network",
+      "file": "plugins/cordova-plugin-network-information/www/network.js",
+      "pluginId": "cordova-plugin-network-information",
+      "clobbers": [
+        "navigator.connection"
+      ]
+    },
+    {
+      "id": "cordova-plugin-network-information.Connection",
+      "file": "plugins/cordova-plugin-network-information/www/Connection.js",
+      "pluginId": "cordova-plugin-network-information",
+      "clobbers": [
+        "Connection"
+      ]
+    },
+    {
       "id": "cordova-plugin-request-location-accuracy.RequestLocationAccuracy",
       "file": "plugins/cordova-plugin-request-location-accuracy/www/android/RequestLocationAccuracy.js",
       "pluginId": "cordova-plugin-request-location-accuracy",
@@ -570,22 +586,6 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       "clobbers": [
         "call"
       ]
-    },
-    {
-      "id": "cordova-plugin-network-information.network",
-      "file": "plugins/cordova-plugin-network-information/www/network.js",
-      "pluginId": "cordova-plugin-network-information",
-      "clobbers": [
-        "navigator.connection"
-      ]
-    },
-    {
-      "id": "cordova-plugin-network-information.Connection",
-      "file": "plugins/cordova-plugin-network-information/www/Connection.js",
-      "pluginId": "cordova-plugin-network-information",
-      "clobbers": [
-        "Connection"
-      ]
     }
   ];
   module.exports.metadata = {
@@ -608,12 +608,12 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
     "cordova-plugin-media": "6.0.0",
     "cordova-plugin-media-capture": "4.0.0",
     "cordova-plugin-nativegeocoder": "3.4.1",
+    "cordova-plugin-network-information": "3.0.0",
     "cordova-plugin-request-location-accuracy": "2.3.0",
     "cordova-plugin-splashscreen": "5.0.2",
     "cordova-plugin-statusbar": "2.4.2",
     "cordova-plugin-streaming-media": "2.3.0",
     "cordova.plugins.diagnostic": "6.1.1",
-    "mx.ferreyra.callnumber": "0.0.2",
-    "cordova-plugin-network-information": "3.0.0"
+    "mx.ferreyra.callnumber": "0.0.2"
   };
 });

@@ -35,7 +35,7 @@ export class CategoriesService {
     })
 
     let headers = {
-      'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI3MTY1OTMyOCIsImlhdCI6MTYzNjkzMDIyM30.JAcX2qUQ5HdZ8WBTroamKnjPvlPOKoANG-r1Pl8Cm0k'//this.userData.token
+      'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiIxMDEyMzQwMjIwIiwiaWF0IjoxNjU4OTI3MDk5fQ.sMAeTi21RqfHKJEfVVq6Mb2qMeZXXt3K6-j1jJ-cNYA'//this.userData.token
     }
 
     let body = {
@@ -56,7 +56,7 @@ export class CategoriesService {
 
 
     let headers = {
-      'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI3MTY1OTMyOCIsImlhdCI6MTYzNjkzMDIyM30.JAcX2qUQ5HdZ8WBTroamKnjPvlPOKoANG-r1Pl8Cm0k'//this.userData.token
+      'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiIxMDEyMzQwMjIwIiwiaWF0IjoxNjU4OTI3MDk5fQ.sMAeTi21RqfHKJEfVVq6Mb2qMeZXXt3K6-j1jJ-cNYA'//this.userData.token
     }
 
     let body = {

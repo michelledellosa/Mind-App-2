@@ -100,7 +100,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "TransfersPage": () => (/* binding */ TransfersPage)
 /* harmony export */ });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! tslib */ 98806);
-/* harmony import */ var _C_Users_user_Documents_Work_Ionic_Angular_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_transfers_page_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./transfers.page.html */ 83779);
+/* harmony import */ var _C_Users_Genox_Documents_WebSites_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_transfers_page_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./transfers.page.html */ 83779);
 /* harmony import */ var _transfers_page_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./transfers.page.scss */ 61262);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 14001);
 
@@ -116,7 +116,7 @@ TransfersPage.ctorParameters = () => [];
 TransfersPage = (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_3__.Component)({
         selector: 'app-transfers',
-        template: _C_Users_user_Documents_Work_Ionic_Angular_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_transfers_page_html__WEBPACK_IMPORTED_MODULE_0__["default"],
+        template: _C_Users_Genox_Documents_WebSites_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_transfers_page_html__WEBPACK_IMPORTED_MODULE_0__["default"],
         styles: [_transfers_page_scss__WEBPACK_IMPORTED_MODULE_1__]
     })
 ], TransfersPage);
@@ -135,7 +135,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<app-header2 [title]=\"'Transferencias'\" [go]=\"'home'\"></app-header2>\n\n<ion-content>\n\n    <ion-card>\n      <ion-card-content>\n        <div style=\"text-align: center\" >\n          <label> Proximamente</label>\n        </div>\n      </ion-card-content>\n    </ion-card>\n\n</ion-content>");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<app-header2 [title]=\"'Transferencias'\" [go]=\"'home'\"></app-header2>\r\n\r\n<ion-content>\r\n\r\n    <ion-card>\r\n      <ion-card-content>\r\n        <div style=\"text-align: center\" >\r\n          <label> Proximamente</label>\r\n        </div>\r\n      </ion-card-content>\r\n    </ion-card>\r\n\r\n</ion-content>");
 
 /***/ }),
 

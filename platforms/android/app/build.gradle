@@ -109,8 +109,8 @@ ext {
 }
 
 // PLUGIN GRADLE EXTENSIONS START
-apply from: "../com-sarriaroman-photoviewer/com-photoviewer.gradle"
-apply from: "../cordova-plugin-background-geolocation/com-dependencies.gradle"
+apply from: "../com-sarriaroman-photoviewer/mindclub-photoviewer.gradle"
+apply from: "../cordova-plugin-background-geolocation/mindclub-dependencies.gradle"
 // PLUGIN GRADLE EXTENSIONS END
 
 def hasBuildExtras1 = file('build-extras.gradle').exists()

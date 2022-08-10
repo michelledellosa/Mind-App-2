@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "245934361075",
-    "project_id": "puntosya-9440d",
-    "storage_bucket": "puntosya-9440d.appspot.com"
+    "project_number": "378025529244",
+    "project_id": "mind-club-5f67e",
+    "storage_bucket": "mind-club-5f67e.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:245934361075:android:48f936c65fe1b3eedf6a86",
+        "mobilesdk_app_id": "1:378025529244:android:be939c66a02f0336390259",
         "android_client_info": {
-          "package_name": "jr.puntosya1.com"
+          "package_name": "com.mind.mindclub"
         }
       },
       "oauth_client": [
         {
-          "client_id": "245934361075-da746nrv9cfc9iig6m4ikfclfdagpgvn.apps.googleusercontent.com",
+          "client_id": "378025529244-i9989h2jhr8i8jc7vh3i5u703sr32h44.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAO7Jet0UpGwaS2-xdO-Fsd_0ekoLFB_FA"
+          "current_key": "AIzaSyCs6Wbi3Tp6XVccItLXMOSkir2wY2uF3tI"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "245934361075-da746nrv9cfc9iig6m4ikfclfdagpgvn.apps.googleusercontent.com",
+              "client_id": "378025529244-i9989h2jhr8i8jc7vh3i5u703sr32h44.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

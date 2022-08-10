@@ -97,7 +97,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "CouponDetailsPage": () => (/* binding */ CouponDetailsPage)
 /* harmony export */ });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! tslib */ 98806);
-/* harmony import */ var _C_Users_user_Documents_Work_Ionic_Angular_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_coupon_details_page_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./coupon-details.page.html */ 76449);
+/* harmony import */ var _C_Users_Genox_Documents_WebSites_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_coupon_details_page_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./coupon-details.page.html */ 76449);
 /* harmony import */ var _coupon_details_page_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./coupon-details.page.scss */ 41382);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/core */ 14001);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ 13252);
@@ -147,7 +147,7 @@ CouponDetailsPage.ctorParameters = () => [
 CouponDetailsPage = (0,tslib__WEBPACK_IMPORTED_MODULE_6__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_7__.Component)({
         selector: 'app-coupon-details',
-        template: _C_Users_user_Documents_Work_Ionic_Angular_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_coupon_details_page_html__WEBPACK_IMPORTED_MODULE_0__["default"],
+        template: _C_Users_Genox_Documents_WebSites_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_coupon_details_page_html__WEBPACK_IMPORTED_MODULE_0__["default"],
         styles: [_coupon_details_page_scss__WEBPACK_IMPORTED_MODULE_1__]
     })
 ], CouponDetailsPage);
