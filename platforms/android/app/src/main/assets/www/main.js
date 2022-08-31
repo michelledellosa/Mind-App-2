@@ -646,7 +646,7 @@ AppModule = (0,tslib__WEBPACK_IMPORTED_MODULE_32__.__decorate)([
                     deps: [_angular_common_http__WEBPACK_IMPORTED_MODULE_39__.HttpClient]
                 }
             }),
-            _angular_fire_compat__WEBPACK_IMPORTED_MODULE_46__.AngularFireModule.initializeApp(src_environments_environment__WEBPACK_IMPORTED_MODULE_25__.environment.firebaseConfig, 'puntosya'),
+            _angular_fire_compat__WEBPACK_IMPORTED_MODULE_46__.AngularFireModule.initializeApp(src_environments_environment__WEBPACK_IMPORTED_MODULE_25__.environment.firebaseConfig, 'Mind Club'),
             _agm_core__WEBPACK_IMPORTED_MODULE_47__.AgmCoreModule.forRoot({
                 apiKey: src_environments_environment__WEBPACK_IMPORTED_MODULE_25__.environment.API_KEY_GOOGLE_MAPS
             }),
@@ -4376,6 +4376,7 @@ let SidebarMenuComponent = class SidebarMenuComponent {
         }
         if (this.loginService.isLogged() == false) {
             console.log('Logged false');
+            console.log('login button......');
             this.router.navigate['/pages/login'];
         }
     }
@@ -4384,7 +4385,7 @@ let SidebarMenuComponent = class SidebarMenuComponent {
         if ((item.name == 'Mi Cuenta') && (this.loginService.isLogged() == true)) {
             alert('Usted ya posee una sesion abierta, por favor cierre sesion.');
             const { router, type, action } = item;
-            // console.log({ router, type, action })
+            console.log({ router, type, action });
             return this.router.navigate(['/home']);
             this.menuController.close();
         }
@@ -4441,8 +4442,10 @@ let SidebarMenuComponent = class SidebarMenuComponent {
                         role: 'si',
                         cssClass: 'secondary',
                         handler: () => {
+                            console.log('cierre Sesion');
                             //localStorage.clear()
                             localStorage.removeItem('userLogin');
+                            localStorage.clear();
                             this.loginService.userData.next(null);
                         }
                     },
@@ -4501,7 +4504,8 @@ __webpack_require__.r(__webpack_exports__);
 // The list of file replacements can be found in `angular.json`.
 const environment = {
     account: "https://unipedidos.azurewebsites.net/",
-    API_KEY_GOOGLE_MAPS: "AIzaSyBXacUor2PuGqwh7gJeiH7JzI0DXPD0HII",
+    //API_KEY_GOOGLE_MAPS: "AIzaSyBXacUor2PuGqwh7gJeiH7JzI0DXPD0HII",
+    API_KEY_GOOGLE_MAPS: "AIzaSyDU_9fU6OTjJbPqSRxWxZzo6uh3hgz461o",
     API: "https://neuron-red-post-api.azurewebsites.net",
     production: true,
     functions: "",
@@ -5024,7 +5028,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<div style=\"background-color: #1A1A1A;\">\r\n  <ion-label class=\"ion-text-wrap\" style=\"background-color: #1A1A1A;\">\r\n    <div style=\"text-align: center; background-color: #1A1A1A; margin-top: 15%;\">\r\n\r\n      <img src=\"assets/images/logo_circle.png\" style=\"width:100px;height: 100px;\" alt=\"\">\r\n    </div>\r\n    <div class=\"center-text ion-padding\" style=\"color: white;\">\r\n      <h2 class=\"user_name\">{{ user}} </h2>\r\n\r\n     \r\n    </div>\r\n  </ion-label>\r\n</div>");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<div style=\"background-color: #1A1A1A;\">\r\n  <ion-label class=\"ion-text-wrap\" style=\"background-color: #1A1A1A;\">\r\n    <div style=\"text-align: center; background-color: #1A1A1A; margin-top: 5%;\">\r\n\r\n      <img src=\"assets/images/logo_circle.png\" style=\"width:100px;height: 100px;\" alt=\"\">\r\n    </div>\r\n    <div class=\"center-text ion-padding\" style=\"color: white;\">\r\n      <h2 class=\"user_name\">{{ user}} </h2>\r\n\r\n     \r\n    </div>\r\n  </ion-label>\r\n</div>");
 
 /***/ }),
 
@@ -5099,7 +5103,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<div style=\"background-color: #1A1A1A; height: 100%;\">\r\n  <ion-list lines=\"none\" style=\"background-color: #1A1A1A;\">\r\n      <app-user-info ></app-user-info>\r\n      <div *ngIf=\"this.user != ''\" class=\"ion-padding \" style=\"color: white;\">\r\n\r\n        <div class=\"ion-padding\" >\r\n          <div style=\"text-align: center;display: flex;\">\r\n            <div style=\"width: 33%;\">\r\n              <div style=\"display: flex;\">\r\n                <!--<mat-icon style=\"width: 20px;\">people</mat-icon>-->\r\n                <ion-icon name=\"person\" style=\"font-size: 24px;\"></ion-icon>\r\n                <ion-label style=\"margin: 0 auto;\">{{this.referralsQtty}}</ion-label>\r\n              </div>\r\n              <div style=\"text-align: center;\">\r\n                <ion-label style=\"font-size: 11px;\">Referidos</ion-label>\r\n              </div>\r\n              \r\n            </div>\r\n      \r\n            <div style=\"width: 33%;\">\r\n              <div style=\"display: flex; \">\r\n                <img src=\"assets/images/logo-axon-15.png\" style=\"width: 22px;\" alt=\"\">\r\n                <ion-label style=\"margin: 0 auto; color: white;\">{{ outstanding_points | number:'1.0-2' }}</ion-label>\r\n              </div>\r\n              <div>\r\n                <ion-label style=\"font-size: 11px;\">Pendientes</ion-label>\r\n              </div>\r\n            </div>\r\n      \r\n            <div style=\"width: 33%;\">\r\n              <div style=\"display: flex; \">\r\n      \r\n                <img src=\"assets/images/logo-axon-15.png\" style=\"width: 22px;\" alt=\"\">\r\n                <ion-label style=\"margin: 0 auto;\">{{available_points | number:'1.0-2'}}</ion-label>\r\n              </div>\r\n              <div>\r\n                <ion-label style=\"font-size: 11px;\">Disponibles</ion-label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          \r\n        </div>\r\n      </div>\r\n   <div class=\"ion-padding\"></div>\r\n      \r\n\r\n    <ng-container *ngFor=\"let item of menuSidebar\" style=\"background-color: #1A1A1A;\">\r\n      <ion-item *ngIf=\"item.public && ((this.user != '')&&((item.name!='Mi Cuenta')))\" button (click)=\"_method(item)\"\r\n        style=\"background-color: #1A1A1A !important;\" class=\"item-background-color\">\r\n        <ion-label class=\"\" style=\"background-color: #1A1A1A;\">\r\n          <h4 >{{item.name | translate| titlecase}} </h4>\r\n        </ion-label>\r\n        <ion-badge slot=\"end\" *ngIf=\"item.isNew\" color=\"danger\">{{'NEW' | uppercase}}</ion-badge>\r\n      </ion-item>\r\n\r\n      <ion-item\r\n        *ngIf=\"item.public && ((this.user == '')&&((item.name!='Inbox')&&(item.name!='Recompensas')&&(item.name!='Cupones')&&(item.name!='Logout')&&(item.name!='Referidos')&&(item.name!='Mis Compras')&&(item.name!='Mis Transferencias')))\"\r\n        button (click)=\"_method(item)\"  class=\"item-background-color\">\r\n        <ion-label class=\"ion-text-wrap\">\r\n          <h4>{{item.name | translate| titlecase}}</h4>\r\n        </ion-label>\r\n        <ion-badge slot=\"end\" *ngIf=\"item.isNew\" color=\"danger\">{{'NEW' | uppercase}}</ion-badge>\r\n      </ion-item>\r\n\r\n    </ng-container>\r\n\r\n  </ion-list>\r\n\r\n  \r\n \r\n</div>");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<div style=\"background-color: #1A1A1A; height: 100%;\">\r\n  <ion-list lines=\"none\" style=\"background-color: #1A1A1A;\">\r\n      <app-user-info ></app-user-info>\r\n      <div *ngIf=\"this.user != ''\" class=\"ion-padding \" style=\"color: white;\">\r\n\r\n        <div class=\"ion-padding\" >\r\n          <div style=\"text-align: center;display: flex;\">\r\n            <div style=\"width: 33%;\">\r\n              <div style=\"display: flex;\">\r\n                <!--<mat-icon style=\"width: 20px;\">people</mat-icon>-->\r\n                <ion-icon name=\"person\" style=\"font-size: 24px;\"></ion-icon>\r\n                <ion-label style=\"margin: 0 auto;\">{{this.referralsQtty}}</ion-label>\r\n              </div>\r\n              <div style=\"text-align: center;\">\r\n                <ion-label style=\"font-size: 11px;\">Referidos</ion-label>\r\n              </div>\r\n              \r\n            </div>\r\n      \r\n            <div style=\"width: 33%;\">\r\n              <div style=\"display: flex; \">\r\n                <img src=\"assets/images/logo-axon-15.png\" style=\"width: 22px;\" alt=\"\">\r\n                <ion-label style=\"margin: 0 auto; color: white;\">{{ outstanding_points | number:'1.0-2' }}</ion-label>\r\n              </div>\r\n              <div>\r\n                <ion-label style=\"font-size: 11px;\">Pendientes</ion-label>\r\n              </div>\r\n            </div>\r\n      \r\n            <div style=\"width: 33%;\">\r\n              <div style=\"display: flex; \">\r\n      \r\n                <img src=\"assets/images/logo-axon-15.png\" style=\"width: 22px;\" alt=\"\">\r\n                <ion-label style=\"margin: 0 auto;\">{{available_points | number:'1.0-2'}}</ion-label>\r\n              </div>\r\n              <div>\r\n                <ion-label style=\"font-size: 11px;\">Disponibles</ion-label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          \r\n        </div>\r\n      </div>\r\n\r\n      \r\n\r\n    <ng-container *ngFor=\"let item of menuSidebar\" style=\"background-color: #1A1A1A;\">\r\n      <ion-item *ngIf=\"item.public && ((this.user != '')&&((item.name!='Mi Cuenta')))\" button (click)=\"_method(item)\"\r\n        style=\"background-color: #1A1A1A !important;\" class=\"item-background-color\">\r\n        <ion-label class=\"\" style=\"background-color: #1A1A1A;\">\r\n          <h4 >{{item.name | translate| titlecase}} </h4>\r\n        </ion-label>\r\n        <ion-badge slot=\"end\" *ngIf=\"item.isNew\" color=\"danger\">{{'NEW' | uppercase}}</ion-badge>\r\n      </ion-item>\r\n\r\n      <ion-item\r\n        *ngIf=\"item.public && ((this.user == '')&&((item.name!='Inbox')&&(item.name!='Recompensas')&&(item.name!='Cupones')&&(item.name!='Logout')&&(item.name!='Referidos')&&(item.name!='Mis Compras')&&(item.name!='Mis Transferencias')))\"\r\n        button (click)=\"_method(item)\"  class=\"item-background-color\">\r\n        <ion-label class=\"ion-text-wrap\">\r\n          <h4>{{item.name | translate| titlecase}}</h4>\r\n        </ion-label>\r\n        <ion-badge slot=\"end\" *ngIf=\"item.isNew\" color=\"danger\">{{'NEW' | uppercase}}</ion-badge>\r\n      </ion-item>\r\n\r\n    </ng-container>\r\n\r\n  </ion-list>\r\n\r\n  \r\n \r\n</div>");
 
 /***/ }),
 

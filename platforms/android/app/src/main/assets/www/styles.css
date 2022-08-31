@@ -66,6 +66,7 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+  --ion-color-primary-font: #121212;
 }
 @media (prefers-color-scheme: dark) {
   /*
@@ -1432,6 +1433,18 @@ sub {
 }
 .ngx-pagination a, .ngx-pagination button {
   color: white !important;
+}
+.item-interactive.ion-invalid {
+  --highlight-background: white !important;
+}
+.item-interactive.ion-valid {
+  --highlight-background: var(--ion-color-secondary);
+}
+.ngx-pagination {
+  font-size: 16px !important;
+}
+.ngx-pagination a, .ngx-pagination button > * :hover {
+  background-color: var(--ion-color-primary-font) !important;
 }
 
 /*# sourceMappingURL=styles.css.map*/
