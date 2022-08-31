@@ -44,3 +44,27 @@
   .posicion{
     display: inline-block;
   }
+
+  ion-item {
+    border-radius: 30px !important;
+    
+    
+    margin-bottom: 10px;
+    border: 1px solid #ffffff;
+   
+    box-shadow: none !important;
+
+    width: 85%;
+    left: 7%;
+    border-color: var(--ion-color-secondary);
+    background-color: var(--ion-color-base);
+}
+
+ion-label{
+  display: flex;
+  justify-content: center;
+}
+
+.list-ios {
+ background-color:  var(--ion-card-background, var(--ion-item-background, var(--ion-background-color, #fff))) !important;
+}

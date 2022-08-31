@@ -6,6 +6,7 @@ import { PopoverCalendarComponent } from 'src/app/components/popover-calendar/po
 import { CalendarPopupService } from 'src/app/services/calendar-popup.service';
 import { ShoppingService } from "src/app/services/shopping.service";
 import { CategoriesService } from 'src/app/services/categories.service';
+import { AlertController } from '@ionic/angular';
 
 
 @Component({
@@ -37,7 +38,8 @@ export class ShoppingPage implements OnInit {
     public popoverController: PopoverController,
     public calendarService: CalendarPopupService,
     public shoppingService: ShoppingService,
-    public categoriesService: CategoriesService
+    public categoriesService: CategoriesService,
+    private alertController: AlertController
 
   ) { }
 
@@ -55,16 +57,18 @@ export class ShoppingPage implements OnInit {
     let searchFinish = this.datePipe.transform(dateFinish, "dd/MM/yyyy");
 
     if (dateInit == null || dateFinish == null) {
-      alert('Error en rango de fechas, por favor verifique')
+      this.presentAlert('Error en rango de fechas, por favor verifique');
     } else {
       if (dateInit > dateFinish) {
-        alert('La fecha inicial no puede ser mayor a la fecha final')
+        this.presentAlert('La fecha inicial no puede ser mayor a la fecha final');
       } else {
         try {
 
           this.categoriesService.getCategories().subscribe(allStores => {
             this.stores = allStores.result;
             this.shoppingService.getShoppings(searchInit, searchFinish).subscribe(shopping => {
+              console.log(shopping.result);
+              
               this.shoppings = shopping.result;
               this.shoppingLength= this.shoppings.length
               for (let i = 0; i < this.stores.length; i++) {
@@ -90,5 +94,24 @@ export class ShoppingPage implements OnInit {
         }
       })
     })
+  }
+
+  async presentAlert(msg:string) {
+
+    const alert = await this.alertController.create({
+
+      // subHeader: 'Acc',
+      message: msg,
+      buttons: [
+        {
+          text: 'ACEPTAR',
+          role: 'si',
+          cssClass: 'secondary'
+        }]
+
+    });
+    await alert.present();
+    let result = await alert.onDidDismiss();
+
   }
 }

@@ -92,7 +92,7 @@ import { PipesModule } from 'src/app/pipes/pipes.module';
         deps: [HttpClient]
       }
     }),
-    AngularFireModule.initializeApp(environment.firebaseConfig, 'puntosya'),
+    AngularFireModule.initializeApp(environment.firebaseConfig, 'Mind Club'),
     AgmCoreModule.forRoot({
       apiKey: environment.API_KEY_GOOGLE_MAPS
     }),

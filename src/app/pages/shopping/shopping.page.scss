@@ -9,7 +9,7 @@
 
 .calendar-inputs {
     display: flex;
-    width: 76%;
+    width: 99%;
 
 }
 
@@ -27,7 +27,7 @@
 }
 
 .button-search {
-    height: 60%;
+    height: 90%;
     margin-top: 10%;
     width: 100%;
 }
@@ -47,11 +47,21 @@
     border-radius: 5px;
 }
 
-.input-date {
+.input-date-l {
     border: none;
-    background-color: white;
-    color: gray;
+    color: white;
+    font-size: 130%;
+    background: gray;
+    
 }
+
+.input-date-r {
+    border: none;
+    color: white;
+    font-size: 130%;
+    background: gray;
+}
+
 
 
 @media (max-width: 400px) {
@@ -61,6 +71,9 @@
         background-color: white;
         color: gray;
         margin-top: 5px;
+        width: 200px;
+        height: 30px;
+
     }
 
     .calendar-inputs {
@@ -80,7 +93,7 @@
         margin-top: 5%;
         width: 30%;
         height: 30px;
-        min-width: 60px !important;
+        //min-width: 60px !important;
     }
 }
 
@@ -105,5 +118,6 @@
 .text-button {
     font-weight: bold;
     color:white;
-    font-size: 12px;
+    font-size: 16px;
 }
+

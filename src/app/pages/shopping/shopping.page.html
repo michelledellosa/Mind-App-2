@@ -8,22 +8,23 @@
   <div class="calendar-options">
     <div class="calendar-inputs" >
       <div style="margin: 0 auto ;">
-        <input type="date" class="input-date" [(ngModel)]="dateInit" >
-      
-        <input type="date" class="input-date" [(ngModel)]="dateFinish">
+        <label>Fecha inicial: &nbsp;</label>  <input type="date" class="input-date-l" [(ngModel)]="dateInit" >
+        <br>
+        <br>
+        <label> &nbsp;fecha final:  &nbsp; &nbsp;</label> <input type="date" class="input-date-r" [(ngModel)]="dateFinish">
       </div>
 
   </div>
 
   <div class="buttton-container">
-    <ion-button class="button-search" style="font-size: 12px;" color="secondary">
+    <ion-button class="button-search" style="font-size: 15px;" color="secondary">
       <label class="text-button" (click)="search(dateInit,dateFinish)" >Buscar</label>
     </ion-button>
   </div>
 
   </div>
   <div style="display: flex; margin-top: 5%;">
-    <div class="center-vh button-style" style="width: 30%; font-size: 12px;height: 40px;">
+    <div class="center-vh button-style" style="width: 30%; font-size: 12px;height: 40px; background-color: black !important;">
         <label>Mostrar</label>
     </div>
     <div style="width: 20%; font-size: 12px;  height: 40px;margin-top: -2%;">
@@ -37,13 +38,13 @@
           </ion-select>
       </ion-item>
   </div>
-    <div class="center-vh button-style" style="width: 50%; font-size: 12px; height: 40px;">
+    <div class="center-vh button-style" style="width: 50%; font-size: 12px; height: 40px; background-color: black !important;">
         <label>Registros por página</label>
     </div>
 
 </div>
 
-  <div class="table-responsive" style="padding: 15% 2%;">
+  <div class="table-responsive" style="padding: 5% 2%;">
     <table class="table table-hover">
       <thead>
         <tr>
@@ -82,9 +83,7 @@
   </div>
 
     <div style="text-align: right;">
-      <ion-button class="button-total" color="secondary">
         <label class="text-button" >Total Compras {{shoppingLength}}</label>
-      </ion-button>
     </div>
   
  

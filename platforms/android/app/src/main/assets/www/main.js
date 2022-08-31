@@ -3386,7 +3386,8 @@ let LoginService = class LoginService {
             'correo': correo,
             'password': password
         };
-        return this.http.post(this.apiUrl + '/login', body);
+        //return this.http.post<any>(this.apiUrl + '/login', body)
+        return this.http.post(this.apiUrl + '/loginUsr', body);
     }
     //verifica si el usuario esta logueado, return true o false
     isLogged() {
@@ -4507,13 +4508,13 @@ const environment = {
     productDetails: "https://unipedidos.azurewebsites.net/shoppingorders/",
     token_test: "'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiIxMDEyMzQwMjIwIiwiaWF0IjoxNjU4OTI3MDk5fQ.sMAeTi21RqfHKJEfVVq6Mb2qMeZXXt3K6-j1jJ-cNYA'",
     firebaseConfig: {
-        apiKey: "AIzaSyCNOKKuUq4F_oSNkIOyTrdpqySgyBzbg8E",
-        authDomain: "puntosya-9440d.firebaseapp.com",
-        projectId: "puntosya-9440d",
-        storageBucket: "puntosya-9440d.appspot.com",
-        messagingSenderId: "245934361075",
-        appId: "1:245934361075:web:bff8b1872a97b65cdf6a86",
-        measurementId: "G-4P8C5EFKW1"
+        apiKey: "AIzaSyA6YohTe0ajX9q_oaQvfeqv1HihD3m0lGQ",
+        authDomain: "mind-club-5f67e.firebaseapp.com",
+        projectId: "mind-club-5f67e",
+        storageBucket: "mind-club-5f67e.appspot.com",
+        messagingSenderId: "378025529244",
+        appId: "1:378025529244:web:983c7f092dff9963390259",
+        measurementId: "G-20ENT0ZV7N"
     }
 };
 /*

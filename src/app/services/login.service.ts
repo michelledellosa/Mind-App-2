@@ -35,7 +35,8 @@ export class LoginService {
       'correo': correo,
       'password': password
     }
-    return this.http.post<any>(this.apiUrl + '/login', body)
+    //return this.http.post<any>(this.apiUrl + '/login', body)
+    return this.http.post<any>(this.apiUrl + '/loginUsr', body)
   }
 
   //verifica si el usuario esta logueado, return true o false

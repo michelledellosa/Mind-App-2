@@ -166,8 +166,9 @@ let LoginPage = class LoginPage {
                     this.router.navigate(['/home']);
                 }
                 if (temp1.result == 2) {
-                    alert('Usuario no registrado');
+                    //alert('Usuario no registrado');
                     //this.router.navigate(['/pages/login'])
+                    this.presentAlerterror();
                 }
             });
             /*this.agmService.user.subscribe(userData=>{
@@ -198,6 +199,23 @@ let LoginPage = class LoginPage {
                 buttons: [
                     {
                         text: 'ACEPTAR',
+                        role: 'si',
+                        cssClass: 'secondary'
+                    }
+                ]
+            });
+            yield alert.present();
+            let result = yield alert.onDidDismiss();
+        });
+    }
+    presentAlerterror() {
+        return (0,tslib__WEBPACK_IMPORTED_MODULE_5__.__awaiter)(this, void 0, void 0, function* () {
+            const alert = yield this.alertController.create({
+                // subHeader: 'Acc',
+                message: 'Usuario no encontrado ',
+                buttons: [
+                    {
+                        text: 'OK ',
                         role: 'si',
                         cssClass: 'secondary'
                     }

@@ -1415,5 +1415,23 @@ sub {
 .adp-summary {
   margin-top: 10%;
 }
+.alert-button.sc-ion-alert-ios {
+  color: white !important;
+}
+.alert-button.sc-ion-alert-md {
+  color: white !important;
+}
+[aria-checked=true].sc-ion-alert-ios .alert-radio-label.sc-ion-alert-ios {
+  color: var(--ion-color-secondary);
+}
+[aria-checked=true].sc-ion-alert-md .alert-radio-icon.sc-ion-alert-md {
+  border-color: var(--ion-color-secondary);
+}
+.alert-radio-inner.sc-ion-alert-md {
+  background-color: var(--ion-color-secondary);
+}
+.ngx-pagination a, .ngx-pagination button {
+  color: white !important;
+}
 
 /*# sourceMappingURL=styles.css.map*/

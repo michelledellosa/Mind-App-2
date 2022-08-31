@@ -73,8 +73,9 @@ onSubmitData(){
           }
 
           if(temp1.result==2){
-            alert('Usuario no registrado');
+            //alert('Usuario no registrado');
             //this.router.navigate(['/pages/login'])
+            this.presentAlerterror();
           }
        });
       /*this.agmService.user.subscribe(userData=>{
@@ -91,10 +92,10 @@ onSubmitData(){
 
         valido = true;
       } else {
-        alert('Error de Credenciales');
+        this.presentAlertgeneric('Error de Credenciales');
       }
     } else {
-      alert('Error de Credenciales');
+      this.presentAlertgeneric('Error de Credenciales');
     }
     return valido;
   }
@@ -108,6 +109,44 @@ onSubmitData(){
       buttons: [
         {
           text: 'ACEPTAR',
+          role: 'si',
+          cssClass: 'secondary'
+        }]
+
+    });
+    await alert.present();
+    let result = await alert.onDidDismiss();
+
+  }
+
+  async presentAlertgeneric(generic:string) {
+
+    const alert = await this.alertController.create({
+
+      // subHeader: 'Acc',
+      message: generic,
+      buttons: [
+        {
+          text: 'ACEPTAR',
+          role: 'si',
+          cssClass: 'secondary'
+        }]
+
+    });
+    await alert.present();
+    let result = await alert.onDidDismiss();
+
+  }
+
+  async presentAlerterror() {
+
+    const alert = await this.alertController.create({
+
+      // subHeader: 'Acc',
+      message: 'Usuario no encontrado ',
+      buttons: [
+        {
+          text: 'OK ',
           role: 'si',
           cssClass: 'secondary'
         }]

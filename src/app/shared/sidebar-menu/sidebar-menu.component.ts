@@ -224,6 +224,8 @@ export class SidebarMenuComponent implements OnInit {
 
     if (this.loginService.isLogged() == false) {
       console.log('Logged false');
+      console.log('login button......');
+      
       this.router.navigate['/pages/login'];
     }
   }
@@ -235,7 +237,7 @@ export class SidebarMenuComponent implements OnInit {
       alert('Usted ya posee una sesion abierta, por favor cierre sesion.');
 
       const { router, type, action } = item;
-      // console.log({ router, type, action })
+       console.log({ router, type, action })
       return this.router.navigate(['/home']);
       this.menuController.close();
     }
@@ -290,8 +292,11 @@ export class SidebarMenuComponent implements OnInit {
           cssClass: 'secondary',
 
           handler: () => {
+            console.log('cierre Sesion');
+            
             //localStorage.clear()
             localStorage.removeItem('userLogin');
+            localStorage.clear();
             this.loginService.userData.next(null);
           }
         },
