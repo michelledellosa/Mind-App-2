@@ -41,6 +41,7 @@ export class SidebarMenuComponent implements OnInit {
       public: true,
       isNew: false,
       description: '',
+      icon: 'person-outline'
     },
     {
       name: 'Home',
@@ -50,6 +51,7 @@ export class SidebarMenuComponent implements OnInit {
       public: true,
       isNew: false,
       description: '',
+      icon : 'home-outline'
     },
     {
       name: 'Referidos',
@@ -59,6 +61,7 @@ export class SidebarMenuComponent implements OnInit {
       public: true,
       isNew: false,
       description: '',
+      icon: 'document-text-outline'
     },
     {
       name: 'Mis Compras',
@@ -68,6 +71,7 @@ export class SidebarMenuComponent implements OnInit {
       public: true,
       isNew: false,
       description: '',
+      icon:'cart-outline'
     },
     {
       name: 'Inbox',
@@ -77,6 +81,7 @@ export class SidebarMenuComponent implements OnInit {
       public: true,
       isNew: false,
       description: '',
+      icon: 'chatbox-outline'
     },
     {
       name: 'Recompensas',
@@ -86,6 +91,7 @@ export class SidebarMenuComponent implements OnInit {
       public: true,
       isNew: false,
       description: '',
+      icon:'repeat-outline'
     },
     {
       name: 'Cupones',
@@ -95,6 +101,7 @@ export class SidebarMenuComponent implements OnInit {
       public: true,
       isNew: false,
       description: '',
+      icon: 'pricetag-outline'
     },
     {
       name: 'Mi Establecimiento',
@@ -104,6 +111,7 @@ export class SidebarMenuComponent implements OnInit {
       public: true,
       isNew: false,
       description: '',
+      icon:'storefront-outline'
     },
     {
       name: 'Mis Transferencias',
@@ -113,6 +121,7 @@ export class SidebarMenuComponent implements OnInit {
       public: true,
       isNew: false,
       description: '',
+      icon: 'share-outline'
     },/*
     {
       name: 'Choose language',
@@ -138,6 +147,7 @@ export class SidebarMenuComponent implements OnInit {
       img: 'exit',
       // router: 'notificaciones',
       type: 'method',
+      icon : 'power-outline',
       action: () => {
         if ((this.loginService.isLogged() == false)) {
           

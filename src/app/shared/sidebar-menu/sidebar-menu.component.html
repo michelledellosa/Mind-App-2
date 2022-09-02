@@ -47,6 +47,7 @@
     <ng-container *ngFor="let item of menuSidebar" style="background-color: #1A1A1A;">
       <ion-item *ngIf="item.public && ((this.user != '')&&((item.name!='Mi Cuenta')))" button (click)="_method(item)"
         style="background-color: #1A1A1A !important;" class="item-background-color">
+        <ion-icon [name]="item.icon" ></ion-icon>
         <ion-label class="" style="background-color: #1A1A1A;">
           <h4 >{{item.name | translate| titlecase}} </h4>
         </ion-label>
@@ -56,6 +57,7 @@
       <ion-item
         *ngIf="item.public && ((this.user == '')&&((item.name!='Inbox')&&(item.name!='Recompensas')&&(item.name!='Cupones')&&(item.name!='Logout')&&(item.name!='Referidos')&&(item.name!='Mis Compras')&&(item.name!='Mis Transferencias')))"
         button (click)="_method(item)"  class="item-background-color">
+        <ion-icon [name]="item.icon" ></ion-icon>
         <ion-label class="ion-text-wrap">
           <h4>{{item.name | translate| titlecase}}</h4>
         </ion-label>
