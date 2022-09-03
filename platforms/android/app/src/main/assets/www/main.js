@@ -4232,6 +4232,7 @@ let SidebarMenuComponent = class SidebarMenuComponent {
                 public: true,
                 isNew: false,
                 description: '',
+                icon: 'person-outline'
             },
             {
                 name: 'Home',
@@ -4241,6 +4242,7 @@ let SidebarMenuComponent = class SidebarMenuComponent {
                 public: true,
                 isNew: false,
                 description: '',
+                icon: 'home-outline'
             },
             {
                 name: 'Referidos',
@@ -4250,6 +4252,7 @@ let SidebarMenuComponent = class SidebarMenuComponent {
                 public: true,
                 isNew: false,
                 description: '',
+                icon: 'document-text-outline'
             },
             {
                 name: 'Mis Compras',
@@ -4259,6 +4262,7 @@ let SidebarMenuComponent = class SidebarMenuComponent {
                 public: true,
                 isNew: false,
                 description: '',
+                icon: 'cart-outline'
             },
             {
                 name: 'Inbox',
@@ -4268,6 +4272,7 @@ let SidebarMenuComponent = class SidebarMenuComponent {
                 public: true,
                 isNew: false,
                 description: '',
+                icon: 'chatbox-outline'
             },
             {
                 name: 'Recompensas',
@@ -4277,6 +4282,7 @@ let SidebarMenuComponent = class SidebarMenuComponent {
                 public: true,
                 isNew: false,
                 description: '',
+                icon: 'repeat-outline'
             },
             {
                 name: 'Cupones',
@@ -4286,6 +4292,7 @@ let SidebarMenuComponent = class SidebarMenuComponent {
                 public: true,
                 isNew: false,
                 description: '',
+                icon: 'pricetag-outline'
             },
             {
                 name: 'Mi Establecimiento',
@@ -4295,6 +4302,7 @@ let SidebarMenuComponent = class SidebarMenuComponent {
                 public: true,
                 isNew: false,
                 description: '',
+                icon: 'storefront-outline'
             },
             {
                 name: 'Mis Transferencias',
@@ -4304,12 +4312,14 @@ let SidebarMenuComponent = class SidebarMenuComponent {
                 public: true,
                 isNew: false,
                 description: '',
+                icon: 'share-outline'
             },
             {
                 name: 'Logout',
                 img: 'exit',
                 // router: 'notificaciones',
                 type: 'method',
+                icon: 'power-outline',
                 action: () => {
                     if ((this.loginService.isLogged() == false)) {
                         alert('Usted no posee una sesiòn activa');
@@ -5103,7 +5113,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<div style=\"background-color: #1A1A1A; height: 100%;\">\r\n  <ion-list lines=\"none\" style=\"background-color: #1A1A1A;\">\r\n      <app-user-info ></app-user-info>\r\n      <div *ngIf=\"this.user != ''\" class=\"ion-padding \" style=\"color: white;\">\r\n\r\n        <div class=\"ion-padding\" >\r\n          <div style=\"text-align: center;display: flex;\">\r\n            <div style=\"width: 33%;\">\r\n              <div style=\"display: flex;\">\r\n                <!--<mat-icon style=\"width: 20px;\">people</mat-icon>-->\r\n                <ion-icon name=\"person\" style=\"font-size: 24px;\"></ion-icon>\r\n                <ion-label style=\"margin: 0 auto;\">{{this.referralsQtty}}</ion-label>\r\n              </div>\r\n              <div style=\"text-align: center;\">\r\n                <ion-label style=\"font-size: 11px;\">Referidos</ion-label>\r\n              </div>\r\n              \r\n            </div>\r\n      \r\n            <div style=\"width: 33%;\">\r\n              <div style=\"display: flex; \">\r\n                <img src=\"assets/images/logo-axon-15.png\" style=\"width: 22px;\" alt=\"\">\r\n                <ion-label style=\"margin: 0 auto; color: white;\">{{ outstanding_points | number:'1.0-2' }}</ion-label>\r\n              </div>\r\n              <div>\r\n                <ion-label style=\"font-size: 11px;\">Pendientes</ion-label>\r\n              </div>\r\n            </div>\r\n      \r\n            <div style=\"width: 33%;\">\r\n              <div style=\"display: flex; \">\r\n      \r\n                <img src=\"assets/images/logo-axon-15.png\" style=\"width: 22px;\" alt=\"\">\r\n                <ion-label style=\"margin: 0 auto;\">{{available_points | number:'1.0-2'}}</ion-label>\r\n              </div>\r\n              <div>\r\n                <ion-label style=\"font-size: 11px;\">Disponibles</ion-label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          \r\n        </div>\r\n      </div>\r\n\r\n      \r\n\r\n    <ng-container *ngFor=\"let item of menuSidebar\" style=\"background-color: #1A1A1A;\">\r\n      <ion-item *ngIf=\"item.public && ((this.user != '')&&((item.name!='Mi Cuenta')))\" button (click)=\"_method(item)\"\r\n        style=\"background-color: #1A1A1A !important;\" class=\"item-background-color\">\r\n        <ion-label class=\"\" style=\"background-color: #1A1A1A;\">\r\n          <h4 >{{item.name | translate| titlecase}} </h4>\r\n        </ion-label>\r\n        <ion-badge slot=\"end\" *ngIf=\"item.isNew\" color=\"danger\">{{'NEW' | uppercase}}</ion-badge>\r\n      </ion-item>\r\n\r\n      <ion-item\r\n        *ngIf=\"item.public && ((this.user == '')&&((item.name!='Inbox')&&(item.name!='Recompensas')&&(item.name!='Cupones')&&(item.name!='Logout')&&(item.name!='Referidos')&&(item.name!='Mis Compras')&&(item.name!='Mis Transferencias')))\"\r\n        button (click)=\"_method(item)\"  class=\"item-background-color\">\r\n        <ion-label class=\"ion-text-wrap\">\r\n          <h4>{{item.name | translate| titlecase}}</h4>\r\n        </ion-label>\r\n        <ion-badge slot=\"end\" *ngIf=\"item.isNew\" color=\"danger\">{{'NEW' | uppercase}}</ion-badge>\r\n      </ion-item>\r\n\r\n    </ng-container>\r\n\r\n  </ion-list>\r\n\r\n  \r\n \r\n</div>");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<div style=\"background-color: #1A1A1A; height: 100%;\">\r\n  <ion-list lines=\"none\" style=\"background-color: #1A1A1A;\">\r\n    <div *ngIf=\"this.user != ''\"  class=\"linep\"></div>\r\n      <app-user-info ></app-user-info>\r\n       \r\n      <div *ngIf=\"this.user != ''\" class=\"ion-padding \" style=\"color: white;\">\r\n       \r\n        <div class=\"ion-padding\" >\r\n          <div style=\"text-align: center;display: flex;\">\r\n            <div style=\"width: 33%;\">\r\n              <div style=\"display: flex;\">\r\n                <!--<mat-icon style=\"width: 20px;\">people</mat-icon>-->\r\n                <ion-icon name=\"person\" style=\"font-size: 24px;\"></ion-icon>\r\n                <ion-label style=\"margin: 0 auto;\">{{this.referralsQtty}}</ion-label>\r\n              </div>\r\n              <div style=\"text-align: center;\">\r\n                <ion-label style=\"font-size: 11px;\">Referidos</ion-label>\r\n              </div>\r\n              \r\n            </div>\r\n            \r\n            <div style=\"width: 33%;\">\r\n              <div style=\"display: flex; \">\r\n                <img src=\"assets/images/logo-axon-15.png\" style=\"width: 22px;\" alt=\"\">\r\n                <ion-label style=\"margin: 0 auto; color: white;\">{{ outstanding_points | number:'1.0-2' }}</ion-label>\r\n              </div>\r\n              <div>\r\n                <ion-label style=\"font-size: 11px;\">Pendientes</ion-label>\r\n              </div>\r\n            </div>\r\n      \r\n            <div style=\"width: 33%;\">\r\n              <div style=\"display: flex; \">\r\n      \r\n                <img src=\"assets/images/logo-axon-15.png\" style=\"width: 22px;\" alt=\"\">\r\n                <ion-label style=\"margin: 0 auto;\">{{available_points | number:'1.0-2'}}</ion-label>\r\n              </div>\r\n              <div>\r\n                <ion-label style=\"font-size: 11px;\">Disponibles</ion-label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          \r\n        </div>\r\n      </div>\r\n\r\n      \r\n      <div class=\"line\"></div>\r\n    <ng-container *ngFor=\"let item of menuSidebar\" style=\"background-color: #1A1A1A;\">\r\n      <ion-item *ngIf=\"item.public && ((this.user != '')&&((item.name!='Mi Cuenta')))\" button (click)=\"_method(item)\"\r\n        style=\"background-color: #1A1A1A !important;\" class=\"item-background-color\">\r\n        <ion-icon [name]=\"item.icon\" ></ion-icon>\r\n        <ion-label class=\"\" style=\"background-color: #1A1A1A;\">\r\n          <h4 >{{item.name | translate| titlecase}} </h4>\r\n        </ion-label>\r\n        <ion-badge slot=\"end\" *ngIf=\"item.isNew\" color=\"danger\">{{'NEW' | uppercase}}</ion-badge>\r\n      </ion-item>\r\n\r\n      <ion-item\r\n        *ngIf=\"item.public && ((this.user == '')&&((item.name!='Inbox')&&(item.name!='Recompensas')&&(item.name!='Cupones')&&(item.name!='Logout')&&(item.name!='Referidos')&&(item.name!='Mis Compras')&&(item.name!='Mis Transferencias')))\"\r\n        button (click)=\"_method(item)\"  class=\"item-background-color\">\r\n        <ion-icon [name]=\"item.icon\" ></ion-icon>\r\n        <ion-label class=\"ion-text-wrap\">\r\n          <h4>{{item.name | translate| titlecase}}</h4>\r\n        </ion-label>\r\n        <ion-badge slot=\"end\" *ngIf=\"item.isNew\" color=\"danger\">{{'NEW' | uppercase}}</ion-badge>\r\n      </ion-item>\r\n\r\n    </ng-container>\r\n\r\n  </ion-list>\r\n\r\n  \r\n \r\n</div>");
 
 /***/ }),
 
@@ -5646,7 +5656,7 @@ module.exports = "ion-header {\n  --background-color: transparent !important;\n 
 /***/ ((module) => {
 
 "use strict";
-module.exports = "ion-label h4 {\n  color: white;\n  font-weight: 700;\n  margin-left: 10%;\n}\n\n.vers {\n  color: #000000;\n  font-size: 14px;\n  font-weight: 400;\n}\n\n.referrals-columns {\n  display: flex;\n  color: #f01454;\n  margin-top: 5%;\n  font-weight: 600;\n  font-size: 80%;\n  padding-left: 10%;\n}\n\n.text-points {\n  text-align: left;\n  margin-top: 10%;\n  font-size: 12px;\n}\n\n.text-points-referrals {\n  font-size: 80%;\n  font-weight: 600;\n}\n\n.red-color {\n  color: red;\n}\n\n.green-color {\n  color: green;\n}\n\n.uni-color {\n  color: #CC9C61;\n}\n\n.footer-sidemenu {\n  padding-left: 5%;\n  display: flex;\n}\n\n.item-background-color {\n  --ion-item-background:#1A1A1A;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNpZGViYXItbWVudS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFFSTtFQUVJLFlBQUE7RUFDQSxnQkFBQTtFQUNBLGdCQUFBO0FBRlI7O0FBS0E7RUFDSSxjQUFBO0VBQ0EsZUFBQTtFQUNBLGdCQUFBO0FBRko7O0FBS0E7RUFDSSxhQUFBO0VBQ0EsY0FBQTtFQUNBLGNBQUE7RUFDQSxnQkFBQTtFQUNBLGNBQUE7RUFDQSxpQkFBQTtBQUZKOztBQUtBO0VBQ0ksZ0JBQUE7RUFDQSxlQUFBO0VBQ0EsZUFBQTtBQUZKOztBQU1BO0VBQ0ksY0FBQTtFQUNBLGdCQUFBO0FBSEo7O0FBTUE7RUFDSSxVQUFBO0FBSEo7O0FBTUE7RUFDSSxZQUFBO0FBSEo7O0FBTUE7RUFDSSxjQUFBO0FBSEo7O0FBTUE7RUFFSSxnQkFBQTtFQUNBLGFBQUE7QUFKSjs7QUFPQTtFQUNJLDZCQUFBO0FBSkoiLCJmaWxlIjoic2lkZWJhci1tZW51LmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXHJcbmlvbi1sYWJlbHtcclxuICAgIGg0e1xyXG4gICAgICAgIC8vY29sb3I6ICNDQzlDNjE7XHJcbiAgICAgICAgY29sb3I6IHdoaXRlO1xyXG4gICAgICAgIGZvbnQtd2VpZ2h0OiA3MDA7XHJcbiAgICAgICAgbWFyZ2luLWxlZnQ6IDEwJTtcclxuICAgIH1cclxufVxyXG4udmVyc3tcclxuICAgIGNvbG9yOiAjMDAwMDAwO1xyXG4gICAgZm9udC1zaXplOiAxNHB4O1xyXG4gICAgZm9udC13ZWlnaHQ6IDQwMDtcclxufVxyXG5cclxuLnJlZmVycmFscy1jb2x1bW5ze1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGNvbG9yOiAjZjAxNDU0O1xyXG4gICAgbWFyZ2luLXRvcDogNSU7XHJcbiAgICBmb250LXdlaWdodDogNjAwO1xyXG4gICAgZm9udC1zaXplOiA4MCU7XHJcbiAgICBwYWRkaW5nLWxlZnQ6IDEwJTtcclxufVxyXG5cclxuLnRleHQtcG9pbnRze1xyXG4gICAgdGV4dC1hbGlnbjogbGVmdDtcclxuICAgIG1hcmdpbi10b3A6IDEwJTtcclxuICAgIGZvbnQtc2l6ZTogMTJweDtcclxufVxyXG5cclxuXHJcbi50ZXh0LXBvaW50cy1yZWZlcnJhbHN7XHJcbiAgICBmb250LXNpemU6IDgwJTtcclxuICAgIGZvbnQtd2VpZ2h0OiA2MDBcclxufVxyXG5cclxuLnJlZC1jb2xvcntcclxuICAgIGNvbG9yOiByZWRcclxufVxyXG5cclxuLmdyZWVuLWNvbG9ye1xyXG4gICAgY29sb3I6IGdyZWVuXHJcbn1cclxuXHJcbi51bmktY29sb3J7XHJcbiAgICBjb2xvcjojQ0M5QzYxXHJcbn1cclxuXHJcbi5mb290ZXItc2lkZW1lbnV7XHJcbiAgICAvL21hcmdpbi10b3A6IDEwJTtcclxuICAgIHBhZGRpbmctbGVmdDogNSU7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG59XHJcblxyXG4uaXRlbS1iYWNrZ3JvdW5kLWNvbG9ye1xyXG4gICAgLS1pb24taXRlbS1iYWNrZ3JvdW5kOiMxQTFBMUE7XHJcbn1cclxuIl19 */";
+module.exports = "ion-label h4 {\n  color: white;\n  font-weight: 700;\n  margin-left: 10%;\n}\n\n.vers {\n  color: #000000;\n  font-size: 14px;\n  font-weight: 400;\n}\n\n.referrals-columns {\n  display: flex;\n  color: #f01454;\n  margin-top: 5%;\n  font-weight: 600;\n  font-size: 80%;\n  padding-left: 10%;\n}\n\n.text-points {\n  text-align: left;\n  margin-top: 10%;\n  font-size: 12px;\n}\n\n.text-points-referrals {\n  font-size: 80%;\n  font-weight: 600;\n}\n\n.red-color {\n  color: red;\n}\n\n.green-color {\n  color: green;\n}\n\n.uni-color {\n  color: #CC9C61;\n}\n\n.footer-sidemenu {\n  padding-left: 5%;\n  display: flex;\n}\n\n.item-background-color {\n  --ion-item-background:#1A1A1A;\n}\n\n.line {\n  border-bottom: solid 1px #cc9c61;\n  width: 100%;\n  height: 0px;\n  margin-bottom: 7px;\n}\n\n.linep {\n  border-bottom: solid 1px #cc9c61;\n  width: 100%;\n  height: 0px;\n  position: absolute;\n  top: 20%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNpZGViYXItbWVudS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFFSTtFQUVJLFlBQUE7RUFDQSxnQkFBQTtFQUNBLGdCQUFBO0FBRlI7O0FBS0E7RUFDSSxjQUFBO0VBQ0EsZUFBQTtFQUNBLGdCQUFBO0FBRko7O0FBS0E7RUFDSSxhQUFBO0VBQ0EsY0FBQTtFQUNBLGNBQUE7RUFDQSxnQkFBQTtFQUNBLGNBQUE7RUFDQSxpQkFBQTtBQUZKOztBQUtBO0VBQ0ksZ0JBQUE7RUFDQSxlQUFBO0VBQ0EsZUFBQTtBQUZKOztBQU1BO0VBQ0ksY0FBQTtFQUNBLGdCQUFBO0FBSEo7O0FBTUE7RUFDSSxVQUFBO0FBSEo7O0FBTUE7RUFDSSxZQUFBO0FBSEo7O0FBTUE7RUFDSSxjQUFBO0FBSEo7O0FBTUE7RUFFSSxnQkFBQTtFQUNBLGFBQUE7QUFKSjs7QUFPQTtFQUNJLDZCQUFBO0FBSko7O0FBT0E7RUFDRSxnQ0FBQTtFQUNBLFdBQUE7RUFDQSxXQUFBO0VBQ0Esa0JBQUE7QUFKRjs7QUFPQTtFQUNJLGdDQUFBO0VBQ0EsV0FBQTtFQUNBLFdBQUE7RUFDQSxrQkFBQTtFQUNBLFFBQUE7QUFKSiIsImZpbGUiOiJzaWRlYmFyLW1lbnUuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcclxuaW9uLWxhYmVse1xyXG4gICAgaDR7XHJcbiAgICAgICAgLy9jb2xvcjogI0NDOUM2MTtcclxuICAgICAgICBjb2xvcjogd2hpdGU7XHJcbiAgICAgICAgZm9udC13ZWlnaHQ6IDcwMDtcclxuICAgICAgICBtYXJnaW4tbGVmdDogMTAlO1xyXG4gICAgfVxyXG59XHJcbi52ZXJze1xyXG4gICAgY29sb3I6ICMwMDAwMDA7XHJcbiAgICBmb250LXNpemU6IDE0cHg7XHJcbiAgICBmb250LXdlaWdodDogNDAwO1xyXG59XHJcblxyXG4ucmVmZXJyYWxzLWNvbHVtbnN7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgY29sb3I6ICNmMDE0NTQ7XHJcbiAgICBtYXJnaW4tdG9wOiA1JTtcclxuICAgIGZvbnQtd2VpZ2h0OiA2MDA7XHJcbiAgICBmb250LXNpemU6IDgwJTtcclxuICAgIHBhZGRpbmctbGVmdDogMTAlO1xyXG59XHJcblxyXG4udGV4dC1wb2ludHN7XHJcbiAgICB0ZXh0LWFsaWduOiBsZWZ0O1xyXG4gICAgbWFyZ2luLXRvcDogMTAlO1xyXG4gICAgZm9udC1zaXplOiAxMnB4O1xyXG59XHJcblxyXG5cclxuLnRleHQtcG9pbnRzLXJlZmVycmFsc3tcclxuICAgIGZvbnQtc2l6ZTogODAlO1xyXG4gICAgZm9udC13ZWlnaHQ6IDYwMFxyXG59XHJcblxyXG4ucmVkLWNvbG9ye1xyXG4gICAgY29sb3I6IHJlZFxyXG59XHJcblxyXG4uZ3JlZW4tY29sb3J7XHJcbiAgICBjb2xvcjogZ3JlZW5cclxufVxyXG5cclxuLnVuaS1jb2xvcntcclxuICAgIGNvbG9yOiNDQzlDNjFcclxufVxyXG5cclxuLmZvb3Rlci1zaWRlbWVudXtcclxuICAgIC8vbWFyZ2luLXRvcDogMTAlO1xyXG4gICAgcGFkZGluZy1sZWZ0OiA1JTtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbn1cclxuXHJcbi5pdGVtLWJhY2tncm91bmQtY29sb3J7XHJcbiAgICAtLWlvbi1pdGVtLWJhY2tncm91bmQ6IzFBMUExQTtcclxufVxyXG5cclxuLmxpbmV7XHJcbiAgYm9yZGVyLWJvdHRvbTpzb2xpZCAxcHggI2NjOWM2MTtcclxuICB3aWR0aDoxMDAlO1xyXG4gIGhlaWdodDowcHg7XHJcbiAgbWFyZ2luLWJvdHRvbTogN3B4O1xyXG59XHJcblxyXG4ubGluZXB7XHJcbiAgICBib3JkZXItYm90dG9tOnNvbGlkIDFweCAjY2M5YzYxO1xyXG4gICAgd2lkdGg6MTAwJTtcclxuICAgIGhlaWdodDowcHg7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICB0b3A6IDIwJTtcclxuICB9Il19 */";
 
 /***/ })
 
