@@ -1,8 +1,10 @@
 <div style="background-color: #1A1A1A; height: 100%;">
   <ion-list lines="none" style="background-color: #1A1A1A;">
+    <div *ngIf="this.user != ''"  class="linep"></div>
       <app-user-info ></app-user-info>
+       
       <div *ngIf="this.user != ''" class="ion-padding " style="color: white;">
-
+       
         <div class="ion-padding" >
           <div style="text-align: center;display: flex;">
             <div style="width: 33%;">
@@ -16,7 +18,7 @@
               </div>
               
             </div>
-      
+            
             <div style="width: 33%;">
               <div style="display: flex; ">
                 <img src="assets/images/logo-axon-15.png" style="width: 22px;" alt="">
@@ -43,7 +45,7 @@
       </div>
 
       
-
+      <div class="line"></div>
     <ng-container *ngFor="let item of menuSidebar" style="background-color: #1A1A1A;">
       <ion-item *ngIf="item.public && ((this.user != '')&&((item.name!='Mi Cuenta')))" button (click)="_method(item)"
         style="background-color: #1A1A1A !important;" class="item-background-color">
