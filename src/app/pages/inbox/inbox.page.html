@@ -1,13 +1,12 @@
 <app-header2 [title]="'Inbox'" [go]="'home'"></app-header2>
 <ion-content>
     <ion-list *ngFor="let notification of userNotification">
-
         <ion-item *ngIf="_loginServices==true && userNotification.length>0; else inboxExist"
             (click)="goDetails(notification.id)">
             <ion-label> {{notification.title}}</ion-label>
         </ion-item>
         <ng-template #inboxExist>
-            <div *ngIf="_loginServices==true && userNotification==undefined;">
+            <div *ngIf="_loginServices==true && userNotification==undefine"  style="text-align: center;">
                 <ion-label> No tiene mensajes en su bandeja de entrada</ion-label>
             </div>
             <div *ngIf="_loginServices==false">
@@ -15,4 +14,11 @@
             </div>
         </ng-template>
     </ion-list>
+        <ion-card *ngIf=" data0 == true">
+            <ion-card-content>
+                <div style="text-align: center;">
+                    <ion-label> No tiene mensajes en su bandeja de entrada</ion-label>
+                </div>
+            </ion-card-content>
+        </ion-card>
 </ion-content>

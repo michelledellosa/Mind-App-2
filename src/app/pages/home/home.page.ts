@@ -147,7 +147,10 @@ export class HomePage implements OnInit {
       console.log('click en cerca de mi')
       this.searchCode='CERCA DE MI'
       //return this.agmService.agmMarket.next(1);
+      console.log(this.searchCode);
       return this.searchCode
+     
+      
     }else{
       this.agmService.agmMarket.next(0);
       this.mapDestroye = false

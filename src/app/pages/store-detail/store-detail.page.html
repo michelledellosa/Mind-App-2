@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar [class.show-background]="showToolbar">
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/home"></ion-back-button>
+      <ion-back-button defaultHref="home"></ion-back-button>
     </ion-buttons>
     <ion-title>{{detail.Establecimiento}}</ion-title>
     <ion-buttons slot="end">
@@ -21,7 +21,7 @@
 
       <h2>{{detail.Establecimiento}}</h2>
 
-      <div class="itemstdets" style="margin-top:2%;">
+      <div class="itemstdets" style="margin-top:2%; margin-bottom:2%;">
         <ion-icon name="location-outline" color="medium"></ion-icon>
         <label>{{detail.Direccion}}</label>
       </div>

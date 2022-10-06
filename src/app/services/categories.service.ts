@@ -50,6 +50,8 @@ export class CategoriesService {
     let latitude;
     let longitude;
     this.agmService.myLocation.subscribe(response => {
+      //console.log("response ==",response);
+      
       latitude = response.position.lat;
       longitude = response.position.lng;
     });
@@ -61,11 +63,12 @@ export class CategoriesService {
 
     let body = {
       'cualsp': '20',
-      'Dato0': "6.2227153",//JSON.stringify(latitude),
-      'Dato01': "-75.5816264",//JSON.stringify(longitude),
+      //'Dato0': "6.2227153",//JSON.stringify(latitude),
+      //'Dato01': "-75.5816264",//JSON.stringify(longitude),
+      'Dato0': "6.1824659",//JSON.stringify(latitude),
+      'Dato01': "-75.5737994",//JSON.stringify(longitude),
       'Dato02': '30'
     }
-
     return this.http.post<any>(this.apiUrl + '/RedApi/reportes/ls', body, { 'headers': headers })
 
   }

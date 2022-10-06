@@ -38,14 +38,11 @@
               </div>
             </div>
           </agm-info-window>
-    
         </agm-marker>
-    
         <agm-circle [latitude]="lat + 0.3" [longitude]="lng" [radius]="5000" [fillColor]="'red'" [circleDraggable]="true"
           [editable]="true">
         </agm-circle>-
       </agm-map>
-      
     </ng-container>
 
     <ng-container *ngIf="markers_nearme && nearme==1 ;else other_content">

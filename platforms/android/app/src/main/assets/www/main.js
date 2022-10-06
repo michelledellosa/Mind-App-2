@@ -1126,13 +1126,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "MapComponent": () => (/* binding */ MapComponent)
 /* harmony export */ });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! tslib */ 98806);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! tslib */ 98806);
 /* harmony import */ var _C_Users_Genox_Documents_WebSites_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_map_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./map.component.html */ 58531);
 /* harmony import */ var _map_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./map.component.scss */ 80670);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/core */ 14001);
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ 13252);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/core */ 14001);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ 13252);
 /* harmony import */ var src_app_services_agm_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/agm.service */ 93774);
 /* harmony import */ var src_app_services_categories_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/categories.service */ 36983);
+/* harmony import */ var _awesome_cordova_plugins_geolocation_ngx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @awesome-cordova-plugins/geolocation/ngx */ 35732);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/common/http */ 83981);
+/* harmony import */ var src_environments_environment__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/environments/environment */ 18260);
+
+
+
 
 
 
@@ -1141,19 +1147,19 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let MapComponent = class MapComponent {
-    constructor(router, agmService, categoriesService) {
+    constructor(router, agmService, categoriesService, geolocation, http) {
         this.router = router;
         this.agmService = agmService;
         this.categoriesService = categoriesService;
+        this.geolocation = geolocation;
+        this.http = http;
+        this.apiUrl = src_environments_environment__WEBPACK_IMPORTED_MODULE_5__.environment.API;
         // google maps zoom level
         this.zoom = 16;
         this.icon_map = '/assets/images/marker-puntosya.png';
         // initial center position for the map
         this.lat = 0;
         this.lng = 0;
-        //Coordenadas para mi ubicacion actual
-        this.mylat = 0;
-        this.mylng = 0;
         this.located = false;
         this.markers = [];
         this.markers_nearme = [];
@@ -1174,6 +1180,35 @@ let MapComponent = class MapComponent {
     }
     ngOnInit() {
         this.checkNearme();
+        this.geo();
+    }
+    geo() {
+        this.geolocation.getCurrentPosition().then((resp) => {
+            this.mylat = resp.coords.latitude;
+            this.mylng = resp.coords.longitude;
+            console.log("my latitud =", this.mylat);
+            console.log("my longitud =", this.mylng);
+            let headers = {
+                'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiIxMDEyMzQwMjIwIiwiaWF0IjoxNjU4OTI3MDk5fQ.sMAeTi21RqfHKJEfVVq6Mb2qMeZXXt3K6-j1jJ-cNYA' //this.userData.token
+            };
+            let body = {
+                'cualsp': '20',
+                //'Dato0': "6.2227153",//JSON.stringify(latitude),
+                //'Dato01': "-75.5816264",//JSON.stringify(longitude),
+                'Dato0': this.mylat,
+                'Dato01': this.mylng,
+                'Dato02': '10'
+            };
+            fetch(this.apiUrl + '/RedApi/reportes/ls', {
+                method: "POST",
+                body: JSON.stringify(body),
+                headers: headers
+            })
+                .then(res => res.json())
+                .then(res => console.log(res));
+        }).catch((error) => {
+            console.log('Error getting location', error);
+        });
     }
     //check opcion cerca de mi
     checkNearme() {
@@ -1181,7 +1216,7 @@ let MapComponent = class MapComponent {
             if (data == 1) {
                 this.nearme = 1;
                 this.categoriesService.getNearToMe().subscribe(stores => {
-                    //console.log('stores result =',JSON.stringify(stores.result));
+                    // console.log('stores result =',JSON.stringify(stores.result));
                     if (stores) {
                         if (stores.result[0].Mensaje) {
                             this.markers_nearme = [];
@@ -1200,14 +1235,16 @@ let MapComponent = class MapComponent {
         });
     }
     listMarkers(param) {
-        console.log('hola33');
+        //console.log('hola33')
         this.agmService.agmMarket.subscribe(listMarkers => {
             if (!listMarkers) {
+                // console.log('91 ==',listMarkers);
                 return;
             }
             ;
             //console.log('this.markers_nearme=',this.markers_nearme[0])
             if (param == false) {
+                console.log('97 ==', listMarkers);
                 this.lat = listMarkers[0].lat;
                 this.lng = listMarkers[0].lng;
                 this.markers = listMarkers;
@@ -1277,12 +1314,14 @@ let MapComponent = class MapComponent {
     }
 };
 MapComponent.ctorParameters = () => [
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__.Router },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_6__.Router },
     { type: src_app_services_agm_service__WEBPACK_IMPORTED_MODULE_2__.AgmService },
-    { type: src_app_services_categories_service__WEBPACK_IMPORTED_MODULE_3__.CategoriesService }
+    { type: src_app_services_categories_service__WEBPACK_IMPORTED_MODULE_3__.CategoriesService },
+    { type: _awesome_cordova_plugins_geolocation_ngx__WEBPACK_IMPORTED_MODULE_4__.Geolocation },
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_7__.HttpClient }
 ];
-MapComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_5__.__decorate)([
-    (0,_angular_core__WEBPACK_IMPORTED_MODULE_6__.Component)({
+MapComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_8__.__decorate)([
+    (0,_angular_core__WEBPACK_IMPORTED_MODULE_9__.Component)({
         selector: 'app-map',
         template: _C_Users_Genox_Documents_WebSites_Mind_App_2_node_modules_ngtools_webpack_src_loaders_direct_resource_js_map_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
         styles: [_map_component_scss__WEBPACK_IMPORTED_MODULE_1__]
@@ -2716,6 +2755,7 @@ let CategoriesService = class CategoriesService {
         let latitude;
         let longitude;
         this.agmService.myLocation.subscribe(response => {
+            //console.log("response ==",response);
             latitude = response.position.lat;
             longitude = response.position.lng;
         });
@@ -2724,8 +2764,10 @@ let CategoriesService = class CategoriesService {
         };
         let body = {
             'cualsp': '20',
-            'Dato0': "6.2227153",
-            'Dato01': "-75.5816264",
+            //'Dato0': "6.2227153",//JSON.stringify(latitude),
+            //'Dato01': "-75.5816264",//JSON.stringify(longitude),
+            'Dato0': "6.1824659",
+            'Dato01': "-75.5737994",
             'Dato02': '30'
         };
         return this.http.post(this.apiUrl + '/RedApi/reportes/ls', body, { 'headers': headers });
@@ -3228,6 +3270,7 @@ let LocationService = class LocationService {
     }
     ngOnInit() {
         //    this.getGeolocation();
+        this.getLocationAccCords();
     }
     /* getCurrentPosition() {
        if ('geolocation' in navigator) {
@@ -3316,6 +3359,7 @@ let LocationService = class LocationService {
                 this.locCords.timestamp = response.timestamp;
                 this.gpsActivated.next(this.locCords);
                 // alert(JSON.stringify(this.locCords));
+                console.log('152 ==', response);
             }).catch((err) => {
                 console.log('Ha ocurrido un error : ' + err);
             });
@@ -4888,7 +4932,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<!--\r\n      // esto es para agregar nombre al marcador\r\n      [label]=\"{\r\n        text: m.label, fontWeight:'bold', fontSize: '20px', fontFamily: '', color: '#EE7909' \r\n      }\"\r\n    -->\r\n    <ng-container *ngIf=\"markers && nearme==0 ;else other_content\">\r\n\r\n      <agm-map [styles]=\"mapStyles\" [backgroundColor]=\"'#CC9C61'\" [disableDefaultUI]=\"true\" [latitude]=\"lat\" [longitude]=\"lng\"\r\n        [minZoom]=\"zoom -3\" [maxZoom]=\"zoom + 3\" [zoom]=\"zoom\"  [streetViewControl]=\"false\"  (mapClick)=\"mapClicked($event)\">\r\n    \r\n        <agm-marker \r\n          class=\"test-map\" \r\n          style=\"height: 10px;\"\r\n          (markerClick)=\"clickedMarker(m.label, i)\"\r\n          [latitude]=\"m.lat\" \r\n          [longitude]=\"m.lng\" \r\n          [title]=\" m.label\" \r\n          [markerDraggable]=\"m.draggable\" \r\n          [iconUrl]=\"iconMarker\"\r\n          (dragEnd)=\"markerDragEnd(m, $event)\"\r\n          *ngFor=\"let m of markers; let i = index\" >\r\n          \r\n          <agm-info-window>\r\n            <div class=\"cntinfmp\">\r\n              <div class=\"header_cntmp\">\r\n                <ion-card-subtitle>{{'Mind'}}</ion-card-subtitle>\r\n                <ion-card-title>{{m.label | titlecase}}</ion-card-title>\r\n              </div>\r\n              <div class=\"content_cntmp\">\r\n                {{m.address}}\r\n              </div>\r\n              <div  class=\"footer_cntmap\" style=\"padding: 5%;\">\r\n                <ion-button class=\"modal-btn\" (click)=\"goToStore(m)\" color=\"secondary\" \r\n                 expand=\"block\" size=\"small\" style=\"height: 90%;\"> \r\n                <label style=\"color: white;\"> {{'Ver' | titlecase}}</label>\r\n                </ion-button>\r\n              </div>\r\n            </div>\r\n          </agm-info-window>\r\n    \r\n        </agm-marker>\r\n    \r\n        <agm-circle [latitude]=\"lat + 0.3\" [longitude]=\"lng\" [radius]=\"5000\" [fillColor]=\"'red'\" [circleDraggable]=\"true\"\r\n          [editable]=\"true\">\r\n        </agm-circle>-\r\n      </agm-map>\r\n      \r\n    </ng-container>\r\n\r\n    <ng-container *ngIf=\"markers_nearme && nearme==1 ;else other_content\">\r\n\r\n      <agm-map [styles]=\"mapStyles\" [backgroundColor]=\"'#CC9C61'\" [disableDefaultUI]=\"true\" [latitude]=\"lat\" [longitude]=\"lng\"\r\n        [minZoom]=\"zoom -3\" [maxZoom]=\"zoom + 3\" [zoom]=\"zoom\"  [streetViewControl]=\"false\"  (mapClick)=\"mapClicked($event)\">\r\n\r\n        <agm-marker \r\n          class=\"test-map\" \r\n          style=\"height: 10px;\"\r\n          (markerClick)=\"clickedMarker(n.label, i)\"\r\n          [latitude]=\"n.Latitud_A\" \r\n          [longitude]=\"n.Longitud_A\" \r\n          [title]=\" n.Establecimiento\" \r\n          [markerDraggable]=false \r\n          [iconUrl]=\"iconMarker\"\r\n          (dragEnd)=\"markerDragEnd(n, $event)\"\r\n          *ngFor=\"let n of markers_nearme; let i = index\" >\r\n          \r\n          <agm-info-window>\r\n            <div class=\"cntinfmp\">\r\n              <div class=\"header_cntmp\">\r\n                <ion-card-subtitle>{{'Mind'}}</ion-card-subtitle>\r\n                <ion-card-title>{{n.Establecimiento | titlecase}}</ion-card-title>\r\n              </div>\r\n              <div class=\"content_cntmp\">\r\n                {{n.Direccion}}\r\n              </div>\r\n              <div  class=\"footer_cntmap\" style=\"padding: 5%;\">\r\n                <ion-button class=\"modal-btn\" (click)=\"goToStore(n)\" color=\"secondary\" \r\n                 expand=\"block\" size=\"small\" style=\"height: 90%;\"> \r\n                <label style=\"color: white;\"> {{'Ver' | titlecase}}</label>\r\n                </ion-button>\r\n              </div>\r\n            </div>\r\n          </agm-info-window>\r\n    \r\n        </agm-marker>\r\n    \r\n        <agm-circle [latitude]=\"lat + 0.3\" [longitude]=\"lng\" [radius]=\"5000\" [fillColor]=\"'red'\" [circleDraggable]=\"true\"\r\n          [editable]=\"true\">\r\n        </agm-circle>-\r\n      </agm-map>\r\n      \r\n    </ng-container>\r\n    <ng-template #other_content>\r\n    </ng-template>");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<!--\r\n      // esto es para agregar nombre al marcador\r\n      [label]=\"{\r\n        text: m.label, fontWeight:'bold', fontSize: '20px', fontFamily: '', color: '#EE7909' \r\n      }\"\r\n    -->\r\n    <ng-container *ngIf=\"markers && nearme==0 ;else other_content\">\r\n\r\n      <agm-map [styles]=\"mapStyles\" [backgroundColor]=\"'#CC9C61'\" [disableDefaultUI]=\"true\" [latitude]=\"lat\" [longitude]=\"lng\"\r\n        [minZoom]=\"zoom -3\" [maxZoom]=\"zoom + 3\" [zoom]=\"zoom\"  [streetViewControl]=\"false\"  (mapClick)=\"mapClicked($event)\">\r\n    \r\n        <agm-marker \r\n          class=\"test-map\" \r\n          style=\"height: 10px;\"\r\n          (markerClick)=\"clickedMarker(m.label, i)\"\r\n          [latitude]=\"m.lat\" \r\n          [longitude]=\"m.lng\" \r\n          [title]=\" m.label\" \r\n          [markerDraggable]=\"m.draggable\" \r\n          [iconUrl]=\"iconMarker\"\r\n          (dragEnd)=\"markerDragEnd(m, $event)\"\r\n          *ngFor=\"let m of markers; let i = index\" >\r\n          \r\n          <agm-info-window>\r\n            <div class=\"cntinfmp\">\r\n              <div class=\"header_cntmp\">\r\n                <ion-card-subtitle>{{'Mind'}}</ion-card-subtitle>\r\n                <ion-card-title>{{m.label | titlecase}}</ion-card-title>\r\n              </div>\r\n              <div class=\"content_cntmp\">\r\n                {{m.address}}\r\n              </div>\r\n              <div  class=\"footer_cntmap\" style=\"padding: 5%;\">\r\n                <ion-button class=\"modal-btn\" (click)=\"goToStore(m)\" color=\"secondary\" \r\n                 expand=\"block\" size=\"small\" style=\"height: 90%;\"> \r\n                <label style=\"color: white;\"> {{'Ver' | titlecase}}</label>\r\n                </ion-button>\r\n              </div>\r\n            </div>\r\n          </agm-info-window>\r\n        </agm-marker>\r\n        <agm-circle [latitude]=\"lat + 0.3\" [longitude]=\"lng\" [radius]=\"5000\" [fillColor]=\"'red'\" [circleDraggable]=\"true\"\r\n          [editable]=\"true\">\r\n        </agm-circle>-\r\n      </agm-map>\r\n    </ng-container>\r\n\r\n    <ng-container *ngIf=\"markers_nearme && nearme==1 ;else other_content\">\r\n\r\n      <agm-map [styles]=\"mapStyles\" [backgroundColor]=\"'#CC9C61'\" [disableDefaultUI]=\"true\" [latitude]=\"lat\" [longitude]=\"lng\"\r\n        [minZoom]=\"zoom -3\" [maxZoom]=\"zoom + 3\" [zoom]=\"zoom\"  [streetViewControl]=\"false\"  (mapClick)=\"mapClicked($event)\">\r\n\r\n        <agm-marker \r\n          class=\"test-map\" \r\n          style=\"height: 10px;\"\r\n          (markerClick)=\"clickedMarker(n.label, i)\"\r\n          [latitude]=\"n.Latitud_A\" \r\n          [longitude]=\"n.Longitud_A\" \r\n          [title]=\" n.Establecimiento\" \r\n          [markerDraggable]=false \r\n          [iconUrl]=\"iconMarker\"\r\n          (dragEnd)=\"markerDragEnd(n, $event)\"\r\n          *ngFor=\"let n of markers_nearme; let i = index\" >\r\n          \r\n          <agm-info-window>\r\n            <div class=\"cntinfmp\">\r\n              <div class=\"header_cntmp\">\r\n                <ion-card-subtitle>{{'Mind'}}</ion-card-subtitle>\r\n                <ion-card-title>{{n.Establecimiento | titlecase}}</ion-card-title>\r\n              </div>\r\n              <div class=\"content_cntmp\">\r\n                {{n.Direccion}}\r\n              </div>\r\n              <div  class=\"footer_cntmap\" style=\"padding: 5%;\">\r\n                <ion-button class=\"modal-btn\" (click)=\"goToStore(n)\" color=\"secondary\" \r\n                 expand=\"block\" size=\"small\" style=\"height: 90%;\"> \r\n                <label style=\"color: white;\"> {{'Ver' | titlecase}}</label>\r\n                </ion-button>\r\n              </div>\r\n            </div>\r\n          </agm-info-window>\r\n    \r\n        </agm-marker>\r\n    \r\n        <agm-circle [latitude]=\"lat + 0.3\" [longitude]=\"lng\" [radius]=\"5000\" [fillColor]=\"'red'\" [circleDraggable]=\"true\"\r\n          [editable]=\"true\">\r\n        </agm-circle>-\r\n      </agm-map>\r\n      \r\n    </ng-container>\r\n    <ng-template #other_content>\r\n    </ng-template>");
 
 /***/ }),
 
@@ -5038,7 +5082,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<div style=\"background-color: #1A1A1A;\">\r\n  <ion-label class=\"ion-text-wrap\" style=\"background-color: #1A1A1A;\">\r\n    <div style=\"text-align: center; background-color: #1A1A1A; margin-top: 5%;\">\r\n\r\n      <img src=\"assets/images/logo_circle.png\" style=\"width:100px;height: 100px;\" alt=\"\">\r\n    </div>\r\n    <div class=\"center-text ion-padding\" style=\"color: white;\">\r\n      <h2 class=\"user_name\">{{ user}} </h2>\r\n\r\n     \r\n    </div>\r\n  </ion-label>\r\n</div>");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<div style=\"background-color: #1A1A1A;\">\r\n  <ion-label class=\"ion-text-wrap\" style=\"background-color: #1A1A1A;\">\r\n    <div style=\"text-align: center; background-color: #1A1A1A; margin-top: 5%;\">\r\n\r\n      <img src=\"assets/images/logo_circle.png\" style=\"width:100px;height: 100px;\" alt=\"\">\r\n    </div>\r\n    <div class=\"center-text ion-padding\" style=\" height: 22% !important ; color: white;\">\r\n      <h2 class=\"user_name\">{{ user}} </h2>\r\n\r\n     \r\n    </div>\r\n  </ion-label>\r\n</div>");
 
 /***/ }),
 
@@ -5113,7 +5157,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<div style=\"background-color: #1A1A1A; height: 100%;\">\r\n  <ion-list lines=\"none\" style=\"background-color: #1A1A1A;\">\r\n    <div *ngIf=\"this.user != ''\"  class=\"linep\"></div>\r\n      <app-user-info ></app-user-info>\r\n       \r\n      <div *ngIf=\"this.user != ''\" class=\"ion-padding \" style=\"color: white;\">\r\n       \r\n        <div class=\"ion-padding\" >\r\n          <div style=\"text-align: center;display: flex;\">\r\n            <div style=\"width: 33%;\">\r\n              <div style=\"display: flex;\">\r\n                <!--<mat-icon style=\"width: 20px;\">people</mat-icon>-->\r\n                <ion-icon name=\"person\" style=\"font-size: 24px;\"></ion-icon>\r\n                <ion-label style=\"margin: 0 auto;\">{{this.referralsQtty}}</ion-label>\r\n              </div>\r\n              <div style=\"text-align: center;\">\r\n                <ion-label style=\"font-size: 11px;\">Referidos</ion-label>\r\n              </div>\r\n              \r\n            </div>\r\n            \r\n            <div style=\"width: 33%;\">\r\n              <div style=\"display: flex; \">\r\n                <img src=\"assets/images/logo-axon-15.png\" style=\"width: 22px;\" alt=\"\">\r\n                <ion-label style=\"margin: 0 auto; color: white;\">{{ outstanding_points | number:'1.0-2' }}</ion-label>\r\n              </div>\r\n              <div>\r\n                <ion-label style=\"font-size: 11px;\">Pendientes</ion-label>\r\n              </div>\r\n            </div>\r\n      \r\n            <div style=\"width: 33%;\">\r\n              <div style=\"display: flex; \">\r\n      \r\n                <img src=\"assets/images/logo-axon-15.png\" style=\"width: 22px;\" alt=\"\">\r\n                <ion-label style=\"margin: 0 auto;\">{{available_points | number:'1.0-2'}}</ion-label>\r\n              </div>\r\n              <div>\r\n                <ion-label style=\"font-size: 11px;\">Disponibles</ion-label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          \r\n        </div>\r\n      </div>\r\n\r\n      \r\n      <div class=\"line\"></div>\r\n    <ng-container *ngFor=\"let item of menuSidebar\" style=\"background-color: #1A1A1A;\">\r\n      <ion-item *ngIf=\"item.public && ((this.user != '')&&((item.name!='Mi Cuenta')))\" button (click)=\"_method(item)\"\r\n        style=\"background-color: #1A1A1A !important;\" class=\"item-background-color\">\r\n        <ion-icon [name]=\"item.icon\" ></ion-icon>\r\n        <ion-label class=\"\" style=\"background-color: #1A1A1A;\">\r\n          <h4 >{{item.name | translate| titlecase}} </h4>\r\n        </ion-label>\r\n        <ion-badge slot=\"end\" *ngIf=\"item.isNew\" color=\"danger\">{{'NEW' | uppercase}}</ion-badge>\r\n      </ion-item>\r\n\r\n      <ion-item\r\n        *ngIf=\"item.public && ((this.user == '')&&((item.name!='Inbox')&&(item.name!='Recompensas')&&(item.name!='Cupones')&&(item.name!='Logout')&&(item.name!='Referidos')&&(item.name!='Mis Compras')&&(item.name!='Mis Transferencias')))\"\r\n        button (click)=\"_method(item)\"  class=\"item-background-color\">\r\n        <ion-icon [name]=\"item.icon\" ></ion-icon>\r\n        <ion-label class=\"ion-text-wrap\">\r\n          <h4>{{item.name | translate| titlecase}}</h4>\r\n        </ion-label>\r\n        <ion-badge slot=\"end\" *ngIf=\"item.isNew\" color=\"danger\">{{'NEW' | uppercase}}</ion-badge>\r\n      </ion-item>\r\n\r\n    </ng-container>\r\n\r\n  </ion-list>\r\n\r\n  \r\n \r\n</div>");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<div style=\"background-color: #1A1A1A; height: 100%;\">\r\n  <ion-list lines=\"none\" style=\"background-color: #1A1A1A;\">\r\n    <div *ngIf=\"this.user != ''\"  class=\"linep\"></div>\r\n      <app-user-info style=\"height: 22px !important;\"></app-user-info>\r\n       \r\n      <div *ngIf=\"this.user != ''\" class=\"ion-padding \" style=\"color: white;\">\r\n       \r\n        <div >\r\n          <div style=\"text-align: center;display: flex;\">\r\n            <div style=\"width: 33%;\">\r\n              <div style=\"display: flex;\">\r\n                <!--<mat-icon style=\"width: 20px;\">people</mat-icon>-->\r\n                <ion-icon name=\"person\" style=\"font-size: 24px;\"></ion-icon>\r\n                <ion-label style=\"margin: 0 auto;\">{{this.referralsQtty}}</ion-label>\r\n              </div>\r\n              <div style=\"text-align: center;\">\r\n                <ion-label style=\"font-size: 11px;\">Referidos</ion-label>\r\n              </div>\r\n              \r\n            </div>\r\n            \r\n            <div style=\"width: 33%;\">\r\n              <div style=\"display: flex; \">\r\n                <img src=\"assets/images/logo-axon-15.png\" style=\"width: 22px;\" alt=\"\">\r\n                <ion-label style=\"margin: 0 auto; color: white;\">{{ outstanding_points | number:'1.0-2' }}</ion-label>\r\n              </div>\r\n              <div>\r\n                <ion-label style=\"font-size: 11px;\">Pendientes</ion-label>\r\n              </div>\r\n            </div>\r\n      \r\n            <div style=\"width: 33%;\">\r\n              <div style=\"display: flex; \">\r\n      \r\n                <img src=\"assets/images/logo-axon-15.png\" style=\"width: 22px;\" alt=\"\">\r\n                <ion-label style=\"margin: 0 auto;\">{{available_points | number:'1.0-2'}}</ion-label>\r\n              </div>\r\n              <div>\r\n                <ion-label style=\"font-size: 11px;\">Disponibles</ion-label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          \r\n        </div>\r\n      </div>\r\n\r\n      \r\n      <div class=\"line\"></div>\r\n    <ng-container *ngFor=\"let item of menuSidebar\" style=\"background-color: #1A1A1A;\">\r\n      <ion-item *ngIf=\"item.public && ((this.user != '')&&((item.name!='Mi Cuenta')))\" button (click)=\"_method(item)\"\r\n        style=\"background-color: #1A1A1A !important;\" class=\"item-background-color\">\r\n        <ion-icon [name]=\"item.icon\" ></ion-icon>\r\n        <ion-label class=\"\" style=\"background-color: #1A1A1A;\">\r\n          <h4 >{{item.name | translate| titlecase}} </h4>\r\n        </ion-label>\r\n        <ion-badge slot=\"end\" *ngIf=\"item.isNew\" color=\"danger\">{{'NEW' | uppercase}}</ion-badge>\r\n      </ion-item>\r\n\r\n      <ion-item\r\n        *ngIf=\"item.public && ((this.user == '')&&((item.name!='Inbox')&&(item.name!='Recompensas')&&(item.name!='Cupones')&&(item.name!='Logout')&&(item.name!='Referidos')&&(item.name!='Mis Compras')&&(item.name!='Mis Transferencias')))\"\r\n        button (click)=\"_method(item)\"  class=\"item-background-color\">\r\n        <ion-icon [name]=\"item.icon\" ></ion-icon>\r\n        <ion-label class=\"ion-text-wrap\">\r\n          <h4>{{item.name | translate| titlecase}}</h4>\r\n        </ion-label>\r\n        <ion-badge slot=\"end\" *ngIf=\"item.isNew\" color=\"danger\">{{'NEW' | uppercase}}</ion-badge>\r\n      </ion-item>\r\n\r\n    </ng-container>\r\n\r\n  </ion-list>\r\n\r\n  \r\n \r\n</div>");
 
 /***/ }),
 
@@ -5546,7 +5590,7 @@ module.exports = ".align-center {\n  text-align: center;\n}\n/*# sourceMappingUR
 /***/ ((module) => {
 
 "use strict";
-module.exports = "ion-toolbar {\n  --background: transparent !important;\n}\nion-toolbar ion-searchbar {\n  --border-radius: 10px;\n}\nion-button {\n  background: #ffffff;\n  border-radius: 10px;\n  padding: 5px;\n  height: 42px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNlYXJjaGJhci5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLG9DQUFBO0FBQ0o7QUFBSTtFQUNJLHFCQUFBO0FBRVI7QUFDQTtFQUNJLG1CQUFBO0VBQ0EsbUJBQUE7RUFDQSxZQUFBO0VBQ0EsWUFBQTtBQUVKIiwiZmlsZSI6InNlYXJjaGJhci5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbImlvbi10b29sYmFye1xyXG4gICAgLS1iYWNrZ3JvdW5kOiB0cmFuc3BhcmVudCAhaW1wb3J0YW50O1xyXG4gICAgaW9uLXNlYXJjaGJhcntcclxuICAgICAgICAtLWJvcmRlci1yYWRpdXM6IDEwcHg7ICAgXHJcbiAgICB9XHJcbn1cclxuaW9uLWJ1dHRvbntcclxuICAgIGJhY2tncm91bmQ6ICNmZmZmZmY7XHJcbiAgICBib3JkZXItcmFkaXVzOiAxMHB4O1xyXG4gICAgcGFkZGluZzogNXB4O1xyXG4gICAgaGVpZ2h0OiA0MnB4O1xyXG59Il19 */";
+module.exports = "ion-toolbar {\n  --background: transparent !important;\n}\nion-toolbar ion-searchbar {\n  --border-radius: 10px;\n}\nion-button {\n  background: #CC9C61;\n  border-radius: 10px;\n  padding: 5px;\n  height: 42px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNlYXJjaGJhci5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLG9DQUFBO0FBQ0o7QUFBSTtFQUNJLHFCQUFBO0FBRVI7QUFDQTtFQUNJLG1CQUFBO0VBQ0EsbUJBQUE7RUFDQSxZQUFBO0VBQ0EsWUFBQTtBQUVKIiwiZmlsZSI6InNlYXJjaGJhci5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbImlvbi10b29sYmFye1xyXG4gICAgLS1iYWNrZ3JvdW5kOiB0cmFuc3BhcmVudCAhaW1wb3J0YW50O1xyXG4gICAgaW9uLXNlYXJjaGJhcntcclxuICAgICAgICAtLWJvcmRlci1yYWRpdXM6IDEwcHg7ICAgXHJcbiAgICB9XHJcbn1cclxuaW9uLWJ1dHRvbntcclxuICAgIGJhY2tncm91bmQ6ICNDQzlDNjE7XHJcbiAgICBib3JkZXItcmFkaXVzOiAxMHB4O1xyXG4gICAgcGFkZGluZzogNXB4O1xyXG4gICAgaGVpZ2h0OiA0MnB4O1xyXG59Il19 */";
 
 /***/ }),
 

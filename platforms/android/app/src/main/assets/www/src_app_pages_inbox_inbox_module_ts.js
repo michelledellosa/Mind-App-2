@@ -138,7 +138,13 @@ let InboxPage = class InboxPage {
             this.notiService.getNotifications()
                 .subscribe(data => {
                 this.allNotifications = data;
+                console.log('data == ', data);
+                if (data.length == 0) {
+                    this.data0 = true;
+                    console.log(this.data0);
+                }
                 this.userNotification = this.allNotifications.filter(res => {
+                    console.log('res user notification ==', res);
                     return res.id_login === this.id;
                 });
             });
@@ -180,7 +186,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<app-header2 [title]=\"'Inbox'\" [go]=\"'home'\"></app-header2>\r\n<ion-content>\r\n    <ion-list *ngFor=\"let notification of userNotification\">\r\n\r\n        <ion-item *ngIf=\"_loginServices==true && userNotification.length>0; else inboxExist\"\r\n            (click)=\"goDetails(notification.id)\">\r\n            <ion-label> {{notification.title}}</ion-label>\r\n        </ion-item>\r\n        <ng-template #inboxExist>\r\n            <div *ngIf=\"_loginServices==true && userNotification==undefined;\">\r\n                <ion-label> No tiene mensajes en su bandeja de entrada</ion-label>\r\n            </div>\r\n            <div *ngIf=\"_loginServices==false\">\r\n                <ion-label>Inicie sesión para acceder a sus mensajes disponibles </ion-label>\r\n            </div>\r\n        </ng-template>\r\n    </ion-list>\r\n</ion-content>");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<app-header2 [title]=\"'Inbox'\" [go]=\"'home'\"></app-header2>\r\n<ion-content>\r\n    <ion-list *ngFor=\"let notification of userNotification\">\r\n        <ion-item *ngIf=\"_loginServices==true && userNotification.length>0; else inboxExist\"\r\n            (click)=\"goDetails(notification.id)\">\r\n            <ion-label> {{notification.title}}</ion-label>\r\n        </ion-item>\r\n        <ng-template #inboxExist>\r\n            <div *ngIf=\"_loginServices==true && userNotification==undefine\"  style=\"text-align: center;\">\r\n                <ion-label> No tiene mensajes en su bandeja de entrada</ion-label>\r\n            </div>\r\n            <div *ngIf=\"_loginServices==false\">\r\n                <ion-label>Inicie sesión para acceder a sus mensajes disponibles </ion-label>\r\n            </div>\r\n        </ng-template>\r\n    </ion-list>\r\n        <ion-card *ngIf=\" data0 == true\">\r\n            <ion-card-content>\r\n                <div style=\"text-align: center;\">\r\n                    <ion-label> No tiene mensajes en su bandeja de entrada</ion-label>\r\n                </div>\r\n            </ion-card-content>\r\n        </ion-card>\r\n</ion-content>");
 
 /***/ }),
 

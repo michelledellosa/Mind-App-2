@@ -65,6 +65,7 @@ export class LocationService {
 
   ngOnInit() {
 //    this.getGeolocation();
+      this.getLocationAccCords();
   }
 
  /* getCurrentPosition() {
@@ -148,6 +149,8 @@ export class LocationService {
         this.locCords.timestamp = response.timestamp;
         this.gpsActivated.next(this.locCords);
        // alert(JSON.stringify(this.locCords));
+       console.log('152 ==', response);
+       
       }).catch((err) => {
         console.log('Ha ocurrido un error : '+err);
       })

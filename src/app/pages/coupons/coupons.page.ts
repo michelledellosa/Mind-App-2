@@ -17,7 +17,7 @@ export class CouponsPage implements OnInit {
   coupons: any = [];
   stores: any = [];
   storeName: string;
-  _loginServices: any
+  _loginServices: any;
 
   constructor(
     public commonService: CommonService,
@@ -35,6 +35,8 @@ export class CouponsPage implements OnInit {
     if (this.loginServices.isLogged() == true) {
       this.couponServices.getCoupons()
         .subscribe(res => {
+          console.log('res cupones ==', res);
+          
           // si existe el parametro Id_Asignado en la posicion 0,
           //no existe listado de cupones para este usuario
           if (res.result[0].Id_Asignado == 'El Cupon con ID  NO existe en la base de datos o esta Des Habilitado') {

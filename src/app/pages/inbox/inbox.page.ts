@@ -3,6 +3,7 @@ import { NotificationsService } from 'src/app/services/notifications.service';
 import { Router } from '@angular/router';
 import { LoginService } from 'src/app/services/login.service'
 import { AgmService } from 'src/app/services/agm.service';
+import { log } from 'console';
 
 @Component({
   selector: 'app-inbox',
@@ -17,6 +18,7 @@ export class InboxPage implements OnInit {
   allNotifications: any[];
   userNotification: any[];
   _loginServices: boolean;
+  data0 : boolean;
   constructor(
     private notiService: NotificationsService,
     private router: Router,
@@ -38,7 +40,15 @@ export class InboxPage implements OnInit {
       this.notiService.getNotifications()
         .subscribe(data => {
           this.allNotifications = data;
+          console.log('data == ',data);
+
+          if (data.length == 0 ) {
+            this.data0 = true;
+            console.log(this.data0);
+          }
+  
           this.userNotification = this.allNotifications.filter(res => {
+            console.log('res user notification ==',res);
             return res.id_login === this.id
           });
         })
